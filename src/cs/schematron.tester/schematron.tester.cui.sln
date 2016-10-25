@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schematron.tester.cui", "schematron.tester.cui.csproj", "{BF7AE2A3-7539-46CC-8FEC-E8FC33C99551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schematron.Insight", "..\Schematron.Insight\Schematron.Insight.csproj", "{44D4508C-50A2-4C50-9222-AA7D9754EF14}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF7AE2A3-7539-46CC-8FEC-E8FC33C99551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7AE2A3-7539-46CC-8FEC-E8FC33C99551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7AE2A3-7539-46CC-8FEC-E8FC33C99551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7AE2A3-7539-46CC-8FEC-E8FC33C99551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D4508C-50A2-4C50-9222-AA7D9754EF14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D4508C-50A2-4C50-9222-AA7D9754EF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D4508C-50A2-4C50-9222-AA7D9754EF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D4508C-50A2-4C50-9222-AA7D9754EF14}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
