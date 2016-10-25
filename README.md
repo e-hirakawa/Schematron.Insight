@@ -6,8 +6,9 @@ Current Provide Environment for Windows.
 ## Installer
 * for win  
  the latest installer here.[https://github.com/e-hirakawa/Schematron.Insight/tree/master/Installer/win]
-* for Others  
-In Preparation.  
+* for Others   
+ In Preparation
+
 ## License
 Schematron.Insight is made available under the terms of the Mozilla Public License (MPL).
 ## Usage
