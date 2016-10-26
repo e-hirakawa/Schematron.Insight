@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<items>
+    <item id="t0000">
+        <name>xhtml</name>
+        <mimetype>application/xhtml+xml</mimetype>
+        <extensions value=".xhtml" />
+        <extensions value=".xhtm" />
+    </item>
+    <item id="t0001">
+        <name>jpeg</name>
+        <mimetype>image/jpeg</mimetype>
+        <extensions value=".jpg" />
+        <extensions value=".jpeg" />
+    </item>
+    <item id="t0002">
+        <name>gif</name>
+        <mimetype>image/gif</mimetype>
+        <extensions value=".gif" />
+    </item>
+    <item id="t0003">
+        <name>png</name>
+        <mimetype>image/png</mimetype>
+        <extensions value=".png" />
+    </item>
+    <item id="t0004">
+        <name>svg</name>
+        <mimetype>image/svg+xml</mimetype>
+        <extensions value=".svg" />
+    </item>
+    <item id="t0005">
+        <name>ncx</name>
+        <mimetype>application/x-dtbncx+xml</mimetype>
+        <extensions value=".ncx" />
+    </item>
+    <item id="t0006">
+        <name>opf</name>
+        <mimetype>application/oebps-package+xml</mimetype>
+        <extensions value=".opf" />
+    </item>
+    <item id="t0007">
+        <name>mp3</name>
+        <mimetype>audio/mpeg</mimetype>
+        <extensions value=".mp3" />
+    </item>
+    <item id="t0008">
+        <name>mp4</name>
+        <mimetype>video/mp4</mimetype>
+        <extensions value=".mp4" />
+    </item>
+    <item id="t0008">
+        <name>WebM</name>
+        <mimetype>video/webm</mimetype>
+        <extensions value=".webm" />
+    </item>
+    <item id="t0009">
+        <name>css</name>
+        <mimetype>text/css</mimetype>
+        <extensions value=".css" />
+    </item>
+    <item id="t0010">
+        <name>script</name>
+        <mimetype>text/javascript</mimetype>
+        <extensions value=".js" />
+    </item>
+    <item id="t0011">
+        <name>text</name>
+        <mimetype>text/plain</mimetype>
+        <extensions value=".txt" />
+    </item>
+    <item id="t0012">
+        <name>pdf</name>
+        <mimetype>application/pdf</mimetype>
+        <extensions value=".pdf" />
+    </item>
+    <item id="t0013">
+        <name>epub</name>
+        <mimetype>application/epub+zip</mimetype>
+        <extensions value=".epub" />
+    </item>
+    <item id="t0014">
+        <name>opentype fonts</name>
+        <mimetype>application/vnd.ms-opentype</mimetype>
+        <extensions value=".otf" />
+    </item>
+    <item id="t0015">
+        <name>woff fonts</name>
+        <mimetype>application/font-woff</mimetype>
+        <extensions value=".woff" />
+    </item>
+    <item id="t0016">
+        <name>media overlays</name>
+        <mimetype>application/smil+xml</mimetype>
+        <extensions value=".smil" />
+        <extensions value=".smi" />
+    </item>
+    <item id="t0017">
+        <name>tts</name>
+        <name>tts</name>
+        <mimetype>application/pls+xml</mimetype>
+        <extensions value=".pls" />
+    </item>
+    <item id="t0018">
+        <name></name>
+        <mimetype></mimetype>
+        <extensions />
+        <extensions value="" />
+    </item>
+</items>

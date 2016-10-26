@@ -1,0 +1,1773 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<cultures>
+    <culture locale-id="1" written-from="RtoL">
+        <name lang="ja">アラビア語</name>
+        <name lang="en">Arabic</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="2" written-from="LtoR">
+        <name lang="ja">ブルガリア語</name>
+        <name lang="en">Bulgarian</name>
+        <code type="three-letter">bul</code>
+    </culture>
+    <culture locale-id="3" written-from="LtoR">
+        <name lang="ja">カタルニア語</name>
+        <name lang="en">Catalan</name>
+        <code type="three-letter">cat</code>
+    </culture>
+    <culture locale-id="4" written-from="LtoR">
+        <name lang="ja">簡体字中国語</name>
+        <name lang="en">Chinese (Simplified)</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="5" written-from="LtoR">
+        <name lang="ja">チェコ語</name>
+        <name lang="en">Czech</name>
+        <code type="three-letter">ces</code>
+    </culture>
+    <culture locale-id="6" written-from="LtoR">
+        <name lang="ja">デンマーク語</name>
+        <name lang="en">Danish</name>
+        <code type="three-letter">dan</code>
+    </culture>
+    <culture locale-id="7" written-from="LtoR">
+        <name lang="ja">ドイツ語</name>
+        <name lang="en">German</name>
+        <code type="three-letter">deu</code>
+    </culture>
+    <culture locale-id="8" written-from="LtoR">
+        <name lang="ja">ギリシャ語</name>
+        <name lang="en">Greek</name>
+        <code type="three-letter">ell</code>
+    </culture>
+    <culture locale-id="9" written-from="LtoR">
+        <name lang="ja">英語</name>
+        <name lang="en">English</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="10" written-from="LtoR">
+        <name lang="ja">スペイン語</name>
+        <name lang="en">Spanish</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="11" written-from="LtoR">
+        <name lang="ja">フィンランド語</name>
+        <name lang="en">Finnish</name>
+        <code type="three-letter">fin</code>
+    </culture>
+    <culture locale-id="12" written-from="LtoR">
+        <name lang="ja">フランス語</name>
+        <name lang="en">French</name>
+        <code type="three-letter">fra</code>
+    </culture>
+    <culture locale-id="13" written-from="RtoL">
+        <name lang="ja">ヘブライ語</name>
+        <name lang="en">Hebrew</name>
+        <code type="three-letter">heb</code>
+    </culture>
+    <culture locale-id="14" written-from="LtoR">
+        <name lang="ja">ハンガリー語</name>
+        <name lang="en">Hungarian</name>
+        <code type="three-letter">hun</code>
+    </culture>
+    <culture locale-id="15" written-from="LtoR">
+        <name lang="ja">アイスランド語</name>
+        <name lang="en">Icelandic</name>
+        <code type="three-letter">isl</code>
+    </culture>
+    <culture locale-id="16" written-from="LtoR">
+        <name lang="ja">イタリア語</name>
+        <name lang="en">Italian</name>
+        <code type="three-letter">ita</code>
+    </culture>
+    <culture locale-id="17" written-from="LtoR">
+        <name lang="ja">日本語</name>
+        <name lang="en">Japanese</name>
+        <code type="three-letter">jpn</code>
+    </culture>
+    <culture locale-id="18" written-from="LtoR">
+        <name lang="ja">韓国語</name>
+        <name lang="en">Korean</name>
+        <code type="three-letter">kor</code>
+    </culture>
+    <culture locale-id="19" written-from="LtoR">
+        <name lang="ja">オランダ語</name>
+        <name lang="en">Dutch</name>
+        <code type="three-letter">nld</code>
+    </culture>
+    <culture locale-id="20" written-from="LtoR">
+        <name lang="ja">ノルウェー語</name>
+        <name lang="en">Norwegian</name>
+        <code type="three-letter">nob</code>
+    </culture>
+    <culture locale-id="21" written-from="LtoR">
+        <name lang="ja">ポーランド語</name>
+        <name lang="en">Polish</name>
+        <code type="three-letter">pol</code>
+    </culture>
+    <culture locale-id="22" written-from="LtoR">
+        <name lang="ja">ポルトガル語</name>
+        <name lang="en">Portuguese</name>
+        <code type="three-letter">por</code>
+    </culture>
+    <culture locale-id="23" written-from="LtoR">
+        <name lang="ja">ロマンシュ語</name>
+        <name lang="en">Romansh</name>
+        <code type="three-letter">roh</code>
+    </culture>
+    <culture locale-id="24" written-from="LtoR">
+        <name lang="ja">ルーマニア語</name>
+        <name lang="en">Romanian</name>
+        <code type="three-letter">ron</code>
+    </culture>
+    <culture locale-id="25" written-from="LtoR">
+        <name lang="ja">ロシア語</name>
+        <name lang="en">Russian</name>
+        <code type="three-letter">rus</code>
+    </culture>
+    <culture locale-id="26" written-from="LtoR">
+        <name lang="ja">クロアチア語</name>
+        <name lang="en">Croatian</name>
+        <code type="three-letter">hrv</code>
+    </culture>
+    <culture locale-id="27" written-from="LtoR">
+        <name lang="ja">スロバキア語</name>
+        <name lang="en">Slovak</name>
+        <code type="three-letter">slk</code>
+    </culture>
+    <culture locale-id="28" written-from="LtoR">
+        <name lang="ja">アルバニア語</name>
+        <name lang="en">Albanian</name>
+        <code type="three-letter">sqi</code>
+    </culture>
+    <culture locale-id="29" written-from="LtoR">
+        <name lang="ja">スウェーデン語</name>
+        <name lang="en">Swedish</name>
+        <code type="three-letter">swe</code>
+    </culture>
+    <culture locale-id="30" written-from="LtoR">
+        <name lang="ja">タイ語</name>
+        <name lang="en">Thai</name>
+        <code type="three-letter">tha</code>
+    </culture>
+    <culture locale-id="31" written-from="LtoR">
+        <name lang="ja">トルコ語</name>
+        <name lang="en">Turkish</name>
+        <code type="three-letter">tur</code>
+    </culture>
+    <culture locale-id="32" written-from="RtoL">
+        <name lang="ja">ウルドゥー語</name>
+        <name lang="en">Urdu</name>
+        <code type="three-letter">urd</code>
+    </culture>
+    <culture locale-id="33" written-from="LtoR">
+        <name lang="ja">インドネシア語</name>
+        <name lang="en">Indonesian</name>
+        <code type="three-letter">ind</code>
+    </culture>
+    <culture locale-id="34" written-from="LtoR">
+        <name lang="ja">ウクライナ語</name>
+        <name lang="en">Ukrainian</name>
+        <code type="three-letter">ukr</code>
+    </culture>
+    <culture locale-id="35" written-from="LtoR">
+        <name lang="ja">ベラルーシ語</name>
+        <name lang="en">Belarusian</name>
+        <code type="three-letter">bel</code>
+    </culture>
+    <culture locale-id="36" written-from="LtoR">
+        <name lang="ja">スロベニア語</name>
+        <name lang="en">Slovenian</name>
+        <code type="three-letter">slv</code>
+    </culture>
+    <culture locale-id="37" written-from="LtoR">
+        <name lang="ja">エストニア語</name>
+        <name lang="en">Estonian</name>
+        <code type="three-letter">est</code>
+    </culture>
+    <culture locale-id="38" written-from="LtoR">
+        <name lang="ja">ラトビア語</name>
+        <name lang="en">Latvian</name>
+        <code type="three-letter">lav</code>
+    </culture>
+    <culture locale-id="39" written-from="LtoR">
+        <name lang="ja">リトアニア語</name>
+        <name lang="en">Lithuanian</name>
+        <code type="three-letter">lit</code>
+    </culture>
+    <culture locale-id="40" written-from="LtoR">
+        <name lang="ja">タジク語</name>
+        <name lang="en">Tajik</name>
+        <code type="three-letter">tgk</code>
+    </culture>
+    <culture locale-id="41" written-from="RtoL">
+        <name lang="ja">ペルシャ語</name>
+        <name lang="en">Persian</name>
+        <code type="three-letter">fas</code>
+    </culture>
+    <culture locale-id="42" written-from="LtoR">
+        <name lang="ja">ベトナム語</name>
+        <name lang="en">Vietnamese</name>
+        <code type="three-letter">vie</code>
+    </culture>
+    <culture locale-id="43" written-from="LtoR">
+        <name lang="ja">アルメニア語</name>
+        <name lang="en">Armenian</name>
+        <code type="three-letter">hye</code>
+    </culture>
+    <culture locale-id="44" written-from="LtoR">
+        <name lang="ja">アゼルバイジャン語</name>
+        <name lang="en">Azeri</name>
+        <code type="three-letter">aze</code>
+    </culture>
+    <culture locale-id="45" written-from="LtoR">
+        <name lang="ja">バスク語</name>
+        <name lang="en">Basque</name>
+        <code type="three-letter">eus</code>
+    </culture>
+    <culture locale-id="46" written-from="LtoR">
+        <name lang="ja">上ソルブ語</name>
+        <name lang="en">Upper Sorbian</name>
+        <code type="three-letter">hsb</code>
+    </culture>
+    <culture locale-id="47" written-from="LtoR">
+        <name lang="ja">マケドニア語 (FYROM)</name>
+        <name lang="en">Macedonian (FYROM)</name>
+        <code type="three-letter">mkd</code>
+    </culture>
+    <culture locale-id="50" written-from="LtoR">
+        <name lang="ja">セツワナ語</name>
+        <name lang="en">Setswana</name>
+        <code type="three-letter">tsn</code>
+    </culture>
+    <culture locale-id="52" written-from="LtoR">
+        <name lang="ja">コサ語</name>
+        <name lang="en">isiXhosa</name>
+        <code type="three-letter">xho</code>
+    </culture>
+    <culture locale-id="53" written-from="LtoR">
+        <name lang="ja">ズールー語</name>
+        <name lang="en">isiZulu</name>
+        <code type="three-letter">zul</code>
+    </culture>
+    <culture locale-id="54" written-from="LtoR">
+        <name lang="ja">アフリカーンス語</name>
+        <name lang="en">Afrikaans</name>
+        <code type="three-letter">afr</code>
+    </culture>
+    <culture locale-id="55" written-from="LtoR">
+        <name lang="ja">グルジア語</name>
+        <name lang="en">Georgian</name>
+        <code type="three-letter">kat</code>
+    </culture>
+    <culture locale-id="56" written-from="LtoR">
+        <name lang="ja">フェロー語</name>
+        <name lang="en">Faroese</name>
+        <code type="three-letter">fao</code>
+    </culture>
+    <culture locale-id="57" written-from="LtoR">
+        <name lang="ja">ヒンディー語</name>
+        <name lang="en">Hindi</name>
+        <code type="three-letter">hin</code>
+    </culture>
+    <culture locale-id="58" written-from="LtoR">
+        <name lang="ja">マルタ語</name>
+        <name lang="en">Maltese</name>
+        <code type="three-letter">mlt</code>
+    </culture>
+    <culture locale-id="59" written-from="LtoR">
+        <name lang="ja">サーミ語 (北)</name>
+        <name lang="en">Sami (Northern)</name>
+        <code type="three-letter">sme</code>
+    </culture>
+    <culture locale-id="60" written-from="LtoR">
+        <name lang="ja">アイルランド語</name>
+        <name lang="en">Irish</name>
+        <code type="three-letter">gle</code>
+    </culture>
+    <culture locale-id="62" written-from="LtoR">
+        <name lang="ja">マレー語</name>
+        <name lang="en">Malay</name>
+        <code type="three-letter">msa</code>
+    </culture>
+    <culture locale-id="63" written-from="LtoR">
+        <name lang="ja">カザフ語</name>
+        <name lang="en">Kazakh</name>
+        <code type="three-letter">kaz</code>
+    </culture>
+    <culture locale-id="64" written-from="LtoR">
+        <name lang="ja">キルギス語</name>
+        <name lang="en">Kyrgyz</name>
+        <code type="three-letter">kir</code>
+    </culture>
+    <culture locale-id="65" written-from="LtoR">
+        <name lang="ja">スワヒリ語</name>
+        <name lang="en">Kiswahili</name>
+        <code type="three-letter">swa</code>
+    </culture>
+    <culture locale-id="66" written-from="LtoR">
+        <name lang="ja">トルクメン語</name>
+        <name lang="en">Turkmen</name>
+        <code type="three-letter">tuk</code>
+    </culture>
+    <culture locale-id="67" written-from="LtoR">
+        <name lang="ja">ウズベク語</name>
+        <name lang="en">Uzbek</name>
+        <code type="three-letter">uzb</code>
+    </culture>
+    <culture locale-id="68" written-from="LtoR">
+        <name lang="ja">タタール語</name>
+        <name lang="en">Tatar</name>
+        <code type="three-letter">tat</code>
+    </culture>
+    <culture locale-id="69" written-from="LtoR">
+        <name lang="ja">バングラ語</name>
+        <name lang="en">Bengali</name>
+        <code type="three-letter">bng</code>
+    </culture>
+    <culture locale-id="70" written-from="LtoR">
+        <name lang="ja">パンジャブ語</name>
+        <name lang="en">Punjabi</name>
+        <code type="three-letter">pan</code>
+    </culture>
+    <culture locale-id="71" written-from="LtoR">
+        <name lang="ja">グジャラート語</name>
+        <name lang="en">Gujarati</name>
+        <code type="three-letter">guj</code>
+    </culture>
+    <culture locale-id="72" written-from="LtoR">
+        <name lang="ja">オディア語</name>
+        <name lang="en">Oriya</name>
+        <code type="three-letter">ori</code>
+    </culture>
+    <culture locale-id="73" written-from="LtoR">
+        <name lang="ja">タミール語</name>
+        <name lang="en">Tamil</name>
+        <code type="three-letter">tam</code>
+    </culture>
+    <culture locale-id="74" written-from="LtoR">
+        <name lang="ja">テルグ語</name>
+        <name lang="en">Telugu</name>
+        <code type="three-letter">tel</code>
+    </culture>
+    <culture locale-id="75" written-from="LtoR">
+        <name lang="ja">カナラ語</name>
+        <name lang="en">Kannada</name>
+        <code type="three-letter">kan</code>
+    </culture>
+    <culture locale-id="76" written-from="LtoR">
+        <name lang="ja">マラヤーラム語</name>
+        <name lang="en">Malayalam</name>
+        <code type="three-letter">mym</code>
+    </culture>
+    <culture locale-id="77" written-from="LtoR">
+        <name lang="ja">アッサム語</name>
+        <name lang="en">Assamese</name>
+        <code type="three-letter">asm</code>
+    </culture>
+    <culture locale-id="78" written-from="LtoR">
+        <name lang="ja">マラーティー語</name>
+        <name lang="en">Marathi</name>
+        <code type="three-letter">mar</code>
+    </culture>
+    <culture locale-id="79" written-from="LtoR">
+        <name lang="ja">サンスクリット語</name>
+        <name lang="en">Sanskrit</name>
+        <code type="three-letter">san</code>
+    </culture>
+    <culture locale-id="80" written-from="LtoR">
+        <name lang="ja">モンゴル語</name>
+        <name lang="en">Mongolian</name>
+        <code type="three-letter">mon</code>
+    </culture>
+    <culture locale-id="81" written-from="LtoR">
+        <name lang="ja">チベット語</name>
+        <name lang="en">Tibetan</name>
+        <code type="three-letter">bod</code>
+    </culture>
+    <culture locale-id="82" written-from="LtoR">
+        <name lang="ja">ウェールズ語</name>
+        <name lang="en">Welsh</name>
+        <code type="three-letter">cym</code>
+    </culture>
+    <culture locale-id="83" written-from="LtoR">
+        <name lang="ja">クメール語</name>
+        <name lang="en">Khmer</name>
+        <code type="three-letter">khm</code>
+    </culture>
+    <culture locale-id="84" written-from="LtoR">
+        <name lang="ja">ラオス語</name>
+        <name lang="en">Lao</name>
+        <code type="three-letter">lao</code>
+    </culture>
+    <culture locale-id="86" written-from="LtoR">
+        <name lang="ja">ガリシア語</name>
+        <name lang="en">Galician</name>
+        <code type="three-letter">glg</code>
+    </culture>
+    <culture locale-id="87" written-from="LtoR">
+        <name lang="ja">コンカニ語</name>
+        <name lang="en">Konkani</name>
+        <code type="three-letter">kok</code>
+    </culture>
+    <culture locale-id="90" written-from="RtoL">
+        <name lang="ja">シリア語</name>
+        <name lang="en">Syriac</name>
+        <code type="three-letter">syr</code>
+    </culture>
+    <culture locale-id="91" written-from="LtoR">
+        <name lang="ja">シンハラ語</name>
+        <name lang="en">Sinhala</name>
+        <code type="three-letter">sin</code>
+    </culture>
+    <culture locale-id="93" written-from="LtoR">
+        <name lang="ja">イヌクティトット語</name>
+        <name lang="en">Inuktitut</name>
+        <code type="three-letter">iku</code>
+    </culture>
+    <culture locale-id="94" written-from="LtoR">
+        <name lang="ja">アムハラ語</name>
+        <name lang="en">Amharic</name>
+        <code type="three-letter">amh</code>
+    </culture>
+    <culture locale-id="95" written-from="LtoR">
+        <name lang="ja">タマジット語</name>
+        <name lang="en">Tamazight</name>
+        <code type="three-letter">tzm</code>
+    </culture>
+    <culture locale-id="97" written-from="LtoR">
+        <name lang="ja">ネパール語</name>
+        <name lang="en">Nepali</name>
+        <code type="three-letter">nep</code>
+    </culture>
+    <culture locale-id="98" written-from="LtoR">
+        <name lang="ja">フリジア語</name>
+        <name lang="en">Frisian</name>
+        <code type="three-letter">fry</code>
+    </culture>
+    <culture locale-id="99" written-from="RtoL">
+        <name lang="ja">パシュトゥー語 </name>
+        <name lang="en">Pashto</name>
+        <code type="three-letter">pus</code>
+    </culture>
+    <culture locale-id="100" written-from="LtoR">
+        <name lang="ja">フィリピノ語</name>
+        <name lang="en">Filipino</name>
+        <code type="three-letter">fil</code>
+    </culture>
+    <culture locale-id="101" written-from="RtoL">
+        <name lang="ja">ディヘビ語</name>
+        <name lang="en">Divehi</name>
+        <code type="three-letter">div</code>
+    </culture>
+    <culture locale-id="104" written-from="LtoR">
+        <name lang="ja">ハウサ語</name>
+        <name lang="en">Hausa</name>
+        <code type="three-letter">hau</code>
+    </culture>
+    <culture locale-id="106" written-from="LtoR">
+        <name lang="ja">ヨルバ語</name>
+        <name lang="en">Yoruba</name>
+        <code type="three-letter">yor</code>
+    </culture>
+    <culture locale-id="107" written-from="LtoR">
+        <name lang="ja">ケチュア語</name>
+        <name lang="en">Quechua</name>
+        <code type="three-letter">qub</code>
+    </culture>
+    <culture locale-id="108" written-from="LtoR">
+        <name lang="ja">セソト サ レボア語</name>
+        <name lang="en">Sesotho sa Leboa</name>
+        <code type="three-letter">nso</code>
+    </culture>
+    <culture locale-id="109" written-from="LtoR">
+        <name lang="ja">バシュキール語</name>
+        <name lang="en">Bashkir</name>
+        <code type="three-letter">bak</code>
+    </culture>
+    <culture locale-id="110" written-from="LtoR">
+        <name lang="ja">ルクセングルグ語</name>
+        <name lang="en">Luxembourgish</name>
+        <code type="three-letter">ltz</code>
+    </culture>
+    <culture locale-id="111" written-from="LtoR">
+        <name lang="ja">グリーンランド語</name>
+        <name lang="en">Greenlandic</name>
+        <code type="three-letter">kal</code>
+    </culture>
+    <culture locale-id="112" written-from="LtoR">
+        <name lang="ja">イボ語</name>
+        <name lang="en">Igbo</name>
+        <code type="three-letter">ibo</code>
+    </culture>
+    <culture locale-id="120" written-from="LtoR">
+        <name lang="ja">イ語</name>
+        <name lang="en">Yi</name>
+        <code type="three-letter">iii</code>
+    </culture>
+    <culture locale-id="122" written-from="LtoR">
+        <name lang="ja">マプドゥングン語</name>
+        <name lang="en">Mapudungun</name>
+        <code type="three-letter">arn</code>
+    </culture>
+    <culture locale-id="124" written-from="LtoR">
+        <name lang="ja">モホーク語</name>
+        <name lang="en">Mohawk</name>
+        <code type="three-letter">moh</code>
+    </culture>
+    <culture locale-id="126" written-from="LtoR">
+        <name lang="ja">ブルトン語</name>
+        <name lang="en">Breton</name>
+        <code type="three-letter">bre</code>
+    </culture>
+    <culture locale-id="127" written-from="LtoR">
+        <name lang="ja">ロケールに依存しない言語 (ロケールに依存しない国)</name>
+        <name lang="en">Invariant Language (Invariant Country)</name>
+        <code type="three-letter">ivl</code>
+    </culture>
+    <culture locale-id="128" written-from="RtoL">
+        <name lang="ja">ウイグル語</name>
+        <name lang="en">Uyghur</name>
+        <code type="three-letter">uig</code>
+    </culture>
+    <culture locale-id="129" written-from="LtoR">
+        <name lang="ja">マオリ語</name>
+        <name lang="en">Maori</name>
+        <code type="three-letter">mri</code>
+    </culture>
+    <culture locale-id="130" written-from="LtoR">
+        <name lang="ja">オクシタン語</name>
+        <name lang="en">Occitan</name>
+        <code type="three-letter">oci</code>
+    </culture>
+    <culture locale-id="131" written-from="LtoR">
+        <name lang="ja">コルシカ語</name>
+        <name lang="en">Corsican</name>
+        <code type="three-letter">cos</code>
+    </culture>
+    <culture locale-id="132" written-from="LtoR">
+        <name lang="ja">アルザス語</name>
+        <name lang="en">Alsatian</name>
+        <code type="three-letter">gsw</code>
+    </culture>
+    <culture locale-id="133" written-from="LtoR">
+        <name lang="ja">サハ語</name>
+        <name lang="en">Yakut</name>
+        <code type="three-letter">sah</code>
+    </culture>
+    <culture locale-id="134" written-from="LtoR">
+        <name lang="ja">キチェ語</name>
+        <name lang="en">K'iche</name>
+        <code type="three-letter">qut</code>
+    </culture>
+    <culture locale-id="135" written-from="LtoR">
+        <name lang="ja">キニヤルワンダ語</name>
+        <name lang="en">Kinyarwanda</name>
+        <code type="three-letter">kin</code>
+    </culture>
+    <culture locale-id="136" written-from="LtoR">
+        <name lang="ja">ウォロフ語</name>
+        <name lang="en">Wolof</name>
+        <code type="three-letter">wol</code>
+    </culture>
+    <culture locale-id="140" written-from="RtoL">
+        <name lang="ja">ダリー語</name>
+        <name lang="en">Dari</name>
+        <code type="three-letter">prs</code>
+    </culture>
+    <culture locale-id="145" written-from="LtoR">
+        <name lang="ja">スコットランド ゲール語</name>
+        <name lang="en">Scottish Gaelic</name>
+        <code type="three-letter">gla</code>
+    </culture>
+    <culture locale-id="1025" written-from="RtoL">
+        <name lang="ja">アラビア語 (サウジアラビア)</name>
+        <name lang="en">Arabic (Saudi Arabia)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="1026" written-from="LtoR">
+        <name lang="ja">ブルガリア語 (ブルガリア)</name>
+        <name lang="en">Bulgarian (Bulgaria)</name>
+        <code type="three-letter">bul</code>
+    </culture>
+    <culture locale-id="1027" written-from="LtoR">
+        <name lang="ja">カタルニア語 (カタルニア)</name>
+        <name lang="en">Catalan (Catalan)</name>
+        <code type="three-letter">cat</code>
+    </culture>
+    <culture locale-id="1028" written-from="LtoR">
+        <name lang="ja">中国語 (繁体字、台湾)</name>
+        <name lang="en">Chinese (Traditional, Taiwan)</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="1029" written-from="LtoR">
+        <name lang="ja">チェコ語 (チェコ共和国)</name>
+        <name lang="en">Czech (Czech Republic)</name>
+        <code type="three-letter">ces</code>
+    </culture>
+    <culture locale-id="1030" written-from="LtoR">
+        <name lang="ja">デンマーク語 (デンマーク)</name>
+        <name lang="en">Danish (Denmark)</name>
+        <code type="three-letter">dan</code>
+    </culture>
+    <culture locale-id="1031" written-from="LtoR">
+        <name lang="ja">ドイツ語 (ドイツ)</name>
+        <name lang="en">German (Germany)</name>
+        <code type="three-letter">deu</code>
+    </culture>
+    <culture locale-id="1032" written-from="LtoR">
+        <name lang="ja">ギリシャ語 (ギリシャ)</name>
+        <name lang="en">Greek (Greece)</name>
+        <code type="three-letter">ell</code>
+    </culture>
+    <culture locale-id="1033" written-from="LtoR">
+        <name lang="ja">英語 (米国)</name>
+        <name lang="en">English (United States)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="1035" written-from="LtoR">
+        <name lang="ja">フィンランド語 (フィンランド)</name>
+        <name lang="en">Finnish (Finland)</name>
+        <code type="three-letter">fin</code>
+    </culture>
+    <culture locale-id="1036" written-from="LtoR">
+        <name lang="ja">フランス語 (フランス)</name>
+        <name lang="en">French (France)</name>
+        <code type="three-letter">fra</code>
+    </culture>
+    <culture locale-id="1037" written-from="RtoL">
+        <name lang="ja">ヘブライ語 (イスラエル)</name>
+        <name lang="en">Hebrew (Israel)</name>
+        <code type="three-letter">heb</code>
+    </culture>
+    <culture locale-id="1038" written-from="LtoR">
+        <name lang="ja">ハンガリー語 (ハンガリー)</name>
+        <name lang="en">Hungarian (Hungary)</name>
+        <code type="three-letter">hun</code>
+    </culture>
+    <culture locale-id="1039" written-from="LtoR">
+        <name lang="ja">アイスランド語 (アイスランド)</name>
+        <name lang="en">Icelandic (Iceland)</name>
+        <code type="three-letter">isl</code>
+    </culture>
+    <culture locale-id="1040" written-from="LtoR">
+        <name lang="ja">イタリア語 (イタリア)</name>
+        <name lang="en">Italian (Italy)</name>
+        <code type="three-letter">ita</code>
+    </culture>
+    <culture locale-id="1041" written-from="LtoR">
+        <name lang="ja">日本語 (日本)</name>
+        <name lang="en">Japanese (Japan)</name>
+        <code type="three-letter">jpn</code>
+    </culture>
+    <culture locale-id="1042" written-from="LtoR">
+        <name lang="ja">韓国語 (韓国)</name>
+        <name lang="en">Korean (Korea)</name>
+        <code type="three-letter">kor</code>
+    </culture>
+    <culture locale-id="1043" written-from="LtoR">
+        <name lang="ja">オランダ語 (オランダ)</name>
+        <name lang="en">Dutch (Netherlands)</name>
+        <code type="three-letter">nld</code>
+    </culture>
+    <culture locale-id="1044" written-from="LtoR">
+        <name lang="ja">ノルウェー語、ブークモール (ノルウェー)</name>
+        <name lang="en">Norwegian, Bokmål (Norway)</name>
+        <code type="three-letter">nob</code>
+    </culture>
+    <culture locale-id="1045" written-from="LtoR">
+        <name lang="ja">ポーランド語 (ポーランド)</name>
+        <name lang="en">Polish (Poland)</name>
+        <code type="three-letter">pol</code>
+    </culture>
+    <culture locale-id="1046" written-from="LtoR">
+        <name lang="ja">ポルトガル語 (ブラジル)</name>
+        <name lang="en">Portuguese (Brazil)</name>
+        <code type="three-letter">por</code>
+    </culture>
+    <culture locale-id="1047" written-from="LtoR">
+        <name lang="ja">ロマンシュ語 (スイス)</name>
+        <name lang="en">Romansh (Switzerland)</name>
+        <code type="three-letter">roh</code>
+    </culture>
+    <culture locale-id="1048" written-from="LtoR">
+        <name lang="ja">ルーマニア語 (ルーマニア)</name>
+        <name lang="en">Romanian (Romania)</name>
+        <code type="three-letter">ron</code>
+    </culture>
+    <culture locale-id="1049" written-from="LtoR">
+        <name lang="ja">ロシア語 (ロシア)</name>
+        <name lang="en">Russian (Russia)</name>
+        <code type="three-letter">rus</code>
+    </culture>
+    <culture locale-id="1050" written-from="LtoR">
+        <name lang="ja">クロアチア語 (クロアチア)</name>
+        <name lang="en">Croatian (Croatia)</name>
+        <code type="three-letter">hrv</code>
+    </culture>
+    <culture locale-id="1051" written-from="LtoR">
+        <name lang="ja">スロバキア語 (スロバキア)</name>
+        <name lang="en">Slovak (Slovakia)</name>
+        <code type="three-letter">slk</code>
+    </culture>
+    <culture locale-id="1052" written-from="LtoR">
+        <name lang="ja">アルバニア語 (アルバニア)</name>
+        <name lang="en">Albanian (Albania)</name>
+        <code type="three-letter">sqi</code>
+    </culture>
+    <culture locale-id="1053" written-from="LtoR">
+        <name lang="ja">スウェーデン語 (スウェーデン)</name>
+        <name lang="en">Swedish (Sweden)</name>
+        <code type="three-letter">swe</code>
+    </culture>
+    <culture locale-id="1054" written-from="LtoR">
+        <name lang="ja">タイ語 (タイ)</name>
+        <name lang="en">Thai (Thailand)</name>
+        <code type="three-letter">tha</code>
+    </culture>
+    <culture locale-id="1055" written-from="LtoR">
+        <name lang="ja">トルコ語 (トルコ)</name>
+        <name lang="en">Turkish (Turkey)</name>
+        <code type="three-letter">tur</code>
+    </culture>
+    <culture locale-id="1056" written-from="RtoL">
+        <name lang="ja">ウルドゥー語 (パキスタン・イスラム共和国)</name>
+        <name lang="en">Urdu (Islamic Republic of Pakistan)</name>
+        <code type="three-letter">urd</code>
+    </culture>
+    <culture locale-id="1057" written-from="LtoR">
+        <name lang="ja">インドネシア語 (インドネシア)</name>
+        <name lang="en">Indonesian (Indonesia)</name>
+        <code type="three-letter">ind</code>
+    </culture>
+    <culture locale-id="1058" written-from="LtoR">
+        <name lang="ja">ウクライナ語 (ウクライナ)</name>
+        <name lang="en">Ukrainian (Ukraine)</name>
+        <code type="three-letter">ukr</code>
+    </culture>
+    <culture locale-id="1059" written-from="LtoR">
+        <name lang="ja">ベラルーシ語 (ベラルーシ)</name>
+        <name lang="en">Belarusian (Belarus)</name>
+        <code type="three-letter">bel</code>
+    </culture>
+    <culture locale-id="1060" written-from="LtoR">
+        <name lang="ja">スロベニア語 (スロベニア)</name>
+        <name lang="en">Slovenian (Slovenia)</name>
+        <code type="three-letter">slv</code>
+    </culture>
+    <culture locale-id="1061" written-from="LtoR">
+        <name lang="ja">エストニア語 (エストニア)</name>
+        <name lang="en">Estonian (Estonia)</name>
+        <code type="three-letter">est</code>
+    </culture>
+    <culture locale-id="1062" written-from="LtoR">
+        <name lang="ja">ラトビア語 (ラトビア)</name>
+        <name lang="en">Latvian (Latvia)</name>
+        <code type="three-letter">lav</code>
+    </culture>
+    <culture locale-id="1063" written-from="LtoR">
+        <name lang="ja">リトアニア語 (リトアニア)</name>
+        <name lang="en">Lithuanian (Lithuania)</name>
+        <code type="three-letter">lit</code>
+    </culture>
+    <culture locale-id="1064" written-from="LtoR">
+        <name lang="ja">タジク語 (キリル、タジキスタン)</name>
+        <name lang="en">Tajik (Cyrillic, Tajikistan)</name>
+        <code type="three-letter">tgk</code>
+    </culture>
+    <culture locale-id="1065" written-from="RtoL">
+        <name lang="ja">ペルシャ語 (イラン)</name>
+        <name lang="en">Persian</name>
+        <code type="three-letter">fas</code>
+    </culture>
+    <culture locale-id="1066" written-from="LtoR">
+        <name lang="ja">ベトナム語 (ベトナム)</name>
+        <name lang="en">Vietnamese (Vietnam)</name>
+        <code type="three-letter">vie</code>
+    </culture>
+    <culture locale-id="1067" written-from="LtoR">
+        <name lang="ja">アルメニア語 (アルメニア)</name>
+        <name lang="en">Armenian (Armenia)</name>
+        <code type="three-letter">hye</code>
+    </culture>
+    <culture locale-id="1068" written-from="LtoR">
+        <name lang="ja">アゼルバイジャン語 (ラテン、アゼルバイジャン)</name>
+        <name lang="en">Azeri (Latin, Azerbaijan)</name>
+        <code type="three-letter">aze</code>
+    </culture>
+    <culture locale-id="1069" written-from="LtoR">
+        <name lang="ja">バスク語 (バスク)</name>
+        <name lang="en">Basque (Basque)</name>
+        <code type="three-letter">eus</code>
+    </culture>
+    <culture locale-id="1070" written-from="LtoR">
+        <name lang="ja">上ソルブ語 (ドイツ)</name>
+        <name lang="en">Upper Sorbian (Germany)</name>
+        <code type="three-letter">hsb</code>
+    </culture>
+    <culture locale-id="1071" written-from="LtoR">
+        <name lang="ja">マケドニア語 (マケドニア旧ユーゴスラビア共和国)</name>
+        <name lang="en">Macedonian (Former Yugoslav Republic of Macedonia)</name>
+        <code type="three-letter">mkd</code>
+    </culture>
+    <culture locale-id="1074" written-from="LtoR">
+        <name lang="ja">セツワナ語 (南アフリカ)</name>
+        <name lang="en">Setswana (South Africa)</name>
+        <code type="three-letter">tsn</code>
+    </culture>
+    <culture locale-id="1076" written-from="LtoR">
+        <name lang="ja">コサ語 (南アフリカ)</name>
+        <name lang="en">isiXhosa (South Africa)</name>
+        <code type="three-letter">xho</code>
+    </culture>
+    <culture locale-id="1077" written-from="LtoR">
+        <name lang="ja">ズールー語 (南アフリカ)</name>
+        <name lang="en">isiZulu (South Africa)</name>
+        <code type="three-letter">zul</code>
+    </culture>
+    <culture locale-id="1078" written-from="LtoR">
+        <name lang="ja">アフリカーンス語 (南アフリカ)</name>
+        <name lang="en">Afrikaans (South Africa)</name>
+        <code type="three-letter">afr</code>
+    </culture>
+    <culture locale-id="1079" written-from="LtoR">
+        <name lang="ja">グルジア語 (ジョージア)</name>
+        <name lang="en">Georgian (Georgia)</name>
+        <code type="three-letter">kat</code>
+    </culture>
+    <culture locale-id="1080" written-from="LtoR">
+        <name lang="ja">フェロー語 (フェロー諸島)</name>
+        <name lang="en">Faroese (Faroe Islands)</name>
+        <code type="three-letter">fao</code>
+    </culture>
+    <culture locale-id="1081" written-from="LtoR">
+        <name lang="ja">ヒンディー語 (インド)</name>
+        <name lang="en">Hindi (India)</name>
+        <code type="three-letter">hin</code>
+    </culture>
+    <culture locale-id="1082" written-from="LtoR">
+        <name lang="ja">マルタ語 (マルタ)</name>
+        <name lang="en">Maltese (Malta)</name>
+        <code type="three-letter">mlt</code>
+    </culture>
+    <culture locale-id="1083" written-from="LtoR">
+        <name lang="ja">北サーミ語 (ノルウェー)</name>
+        <name lang="en">Sami, Northern (Norway)</name>
+        <code type="three-letter">sme</code>
+    </culture>
+    <culture locale-id="1086" written-from="LtoR">
+        <name lang="ja">マレー語 (マレーシア)</name>
+        <name lang="en">Malay (Malaysia)</name>
+        <code type="three-letter">msa</code>
+    </culture>
+    <culture locale-id="1087" written-from="LtoR">
+        <name lang="ja">カザーフ語 (カザフスタン)</name>
+        <name lang="en">Kazakh (Kazakhstan)</name>
+        <code type="three-letter">kaz</code>
+    </culture>
+    <culture locale-id="1088" written-from="LtoR">
+        <name lang="ja">キルギス語 (キルギス)</name>
+        <name lang="en">Kyrgyz (Kyrgyzstan)</name>
+        <code type="three-letter">kir</code>
+    </culture>
+    <culture locale-id="1089" written-from="LtoR">
+        <name lang="ja">スワヒリ語 (ケニア)</name>
+        <name lang="en">Kiswahili (Kenya)</name>
+        <code type="three-letter">swa</code>
+    </culture>
+    <culture locale-id="1090" written-from="LtoR">
+        <name lang="ja">トルクメン語 (トルクメニスタン)</name>
+        <name lang="en">Turkmen (Turkmenistan)</name>
+        <code type="three-letter">tuk</code>
+    </culture>
+    <culture locale-id="1091" written-from="LtoR">
+        <name lang="ja">ウズベク語 (ラテン、ウズベキスタン)</name>
+        <name lang="en">Uzbek (Latin, Uzbekistan)</name>
+        <code type="three-letter">uzb</code>
+    </culture>
+    <culture locale-id="1092" written-from="LtoR">
+        <name lang="ja">タタール語 (ロシア)</name>
+        <name lang="en">Tatar (Russia)</name>
+        <code type="three-letter">tat</code>
+    </culture>
+    <culture locale-id="1093" written-from="LtoR">
+        <name lang="ja">バングラ語 (インド)</name>
+        <name lang="en">Bengali (India)</name>
+        <code type="three-letter">bng</code>
+    </culture>
+    <culture locale-id="1094" written-from="LtoR">
+        <name lang="ja">パンジャーブ語 (インド)</name>
+        <name lang="en">Punjabi (India)</name>
+        <code type="three-letter">pan</code>
+    </culture>
+    <culture locale-id="1095" written-from="LtoR">
+        <name lang="ja">グジャラート語 (インド)</name>
+        <name lang="en">Gujarati (India)</name>
+        <code type="three-letter">guj</code>
+    </culture>
+    <culture locale-id="1096" written-from="LtoR">
+        <name lang="ja">オディア語 (インド)</name>
+        <name lang="en">Oriya (India)</name>
+        <code type="three-letter">ori</code>
+    </culture>
+    <culture locale-id="1097" written-from="LtoR">
+        <name lang="ja">タミール語 (インド)</name>
+        <name lang="en">Tamil (India)</name>
+        <code type="three-letter">tam</code>
+    </culture>
+    <culture locale-id="1098" written-from="LtoR">
+        <name lang="ja">テルグ語 (インド)</name>
+        <name lang="en">Telugu (India)</name>
+        <code type="three-letter">tel</code>
+    </culture>
+    <culture locale-id="1099" written-from="LtoR">
+        <name lang="ja">カナラ語 (インド)</name>
+        <name lang="en">Kannada (India)</name>
+        <code type="three-letter">kan</code>
+    </culture>
+    <culture locale-id="1100" written-from="LtoR">
+        <name lang="ja">マラヤラム語 (インド)</name>
+        <name lang="en">Malayalam (India)</name>
+        <code type="three-letter">mym</code>
+    </culture>
+    <culture locale-id="1101" written-from="LtoR">
+        <name lang="ja">アッサム語 (インド)</name>
+        <name lang="en">Assamese (India)</name>
+        <code type="three-letter">asm</code>
+    </culture>
+    <culture locale-id="1102" written-from="LtoR">
+        <name lang="ja">マラーティー語 (インド)</name>
+        <name lang="en">Marathi (India)</name>
+        <code type="three-letter">mar</code>
+    </culture>
+    <culture locale-id="1103" written-from="LtoR">
+        <name lang="ja">サンスクリット語 (インド)</name>
+        <name lang="en">Sanskrit (India)</name>
+        <code type="three-letter">san</code>
+    </culture>
+    <culture locale-id="1104" written-from="LtoR">
+        <name lang="ja">モンゴル語 (キリル、モンゴル)</name>
+        <name lang="en">Mongolian (Cyrillic, Mongolia)</name>
+        <code type="three-letter">mon</code>
+    </culture>
+    <culture locale-id="1105" written-from="LtoR">
+        <name lang="ja">チベット語 (中国)</name>
+        <name lang="en">Tibetan (PRC)</name>
+        <code type="three-letter">bod</code>
+    </culture>
+    <culture locale-id="1106" written-from="LtoR">
+        <name lang="ja">ウェールズ語 (英国)</name>
+        <name lang="en">Welsh (United Kingdom)</name>
+        <code type="three-letter">cym</code>
+    </culture>
+    <culture locale-id="1107" written-from="LtoR">
+        <name lang="ja">クメール語 (カンボジア)</name>
+        <name lang="en">Khmer (Cambodia)</name>
+        <code type="three-letter">khm</code>
+    </culture>
+    <culture locale-id="1108" written-from="LtoR">
+        <name lang="ja">ラオス語 (ラオス人民民主共和国)</name>
+        <name lang="en">Lao (Lao P.D.R.)</name>
+        <code type="three-letter">lao</code>
+    </culture>
+    <culture locale-id="1110" written-from="LtoR">
+        <name lang="ja">ガリシア語 (ガリシア)</name>
+        <name lang="en">Galician (Galician)</name>
+        <code type="three-letter">glg</code>
+    </culture>
+    <culture locale-id="1111" written-from="LtoR">
+        <name lang="ja">コンカニ語 (インド)</name>
+        <name lang="en">Konkani (India)</name>
+        <code type="three-letter">kok</code>
+    </culture>
+    <culture locale-id="1114" written-from="RtoL">
+        <name lang="ja">シリア語 (シリア)</name>
+        <name lang="en">Syriac (Syria)</name>
+        <code type="three-letter">syr</code>
+    </culture>
+    <culture locale-id="1115" written-from="LtoR">
+        <name lang="ja">シンハラ語 (スリランカ)</name>
+        <name lang="en">Sinhala (Sri Lanka)</name>
+        <code type="three-letter">sin</code>
+    </culture>
+    <culture locale-id="1117" written-from="LtoR">
+        <name lang="ja">イヌクティトット語 (カナダ音節文字、カナダ)</name>
+        <name lang="en">Inuktitut (Syllabics, Canada)</name>
+        <code type="three-letter">iku</code>
+    </culture>
+    <culture locale-id="1118" written-from="LtoR">
+        <name lang="ja">アムハラ語 (エチオピア)</name>
+        <name lang="en">Amharic (Ethiopia)</name>
+        <code type="three-letter">amh</code>
+    </culture>
+    <culture locale-id="1121" written-from="LtoR">
+        <name lang="ja">ネパール語 (ネパール)</name>
+        <name lang="en">Nepali (Nepal)</name>
+        <code type="three-letter">nep</code>
+    </culture>
+    <culture locale-id="1122" written-from="LtoR">
+        <name lang="ja">フリジア語 (オランダ)</name>
+        <name lang="en">Frisian (Netherlands)</name>
+        <code type="three-letter">fry</code>
+    </culture>
+    <culture locale-id="1123" written-from="RtoL">
+        <name lang="ja">パシュトゥー語 (アフガニスタン)</name>
+        <name lang="en">Pashto (Afghanistan)</name>
+        <code type="three-letter">pus</code>
+    </culture>
+    <culture locale-id="1124" written-from="LtoR">
+        <name lang="ja">フィリピノ語 (フィリピン)</name>
+        <name lang="en">Filipino (Philippines)</name>
+        <code type="three-letter">fil</code>
+    </culture>
+    <culture locale-id="1125" written-from="RtoL">
+        <name lang="ja">ディヘビ語 (モルディブ)</name>
+        <name lang="en">Divehi (Maldives)</name>
+        <code type="three-letter">div</code>
+    </culture>
+    <culture locale-id="1128" written-from="LtoR">
+        <name lang="ja">ハウサ語 (ラテン、ナイジェリア)</name>
+        <name lang="en">Hausa (Latin, Nigeria)</name>
+        <code type="three-letter">hau</code>
+    </culture>
+    <culture locale-id="1130" written-from="LtoR">
+        <name lang="ja">ヨルバ語 (ナイジェリア)</name>
+        <name lang="en">Yoruba (Nigeria)</name>
+        <code type="three-letter">yor</code>
+    </culture>
+    <culture locale-id="1131" written-from="LtoR">
+        <name lang="ja">ケチュア語 (ボリビア)</name>
+        <name lang="en">Quechua (Bolivia)</name>
+        <code type="three-letter">qub</code>
+    </culture>
+    <culture locale-id="1132" written-from="LtoR">
+        <name lang="ja">セソト サ レボア語 (南アフリカ)</name>
+        <name lang="en">Sesotho sa Leboa (South Africa)</name>
+        <code type="three-letter">nso</code>
+    </culture>
+    <culture locale-id="1133" written-from="LtoR">
+        <name lang="ja">バシュキール語 (ロシア)</name>
+        <name lang="en">Bashkir (Russia)</name>
+        <code type="three-letter">bak</code>
+    </culture>
+    <culture locale-id="1134" written-from="LtoR">
+        <name lang="ja">ルクセングルグ語 (ルクセンブルグ)</name>
+        <name lang="en">Luxembourgish (Luxembourg)</name>
+        <code type="three-letter">ltz</code>
+    </culture>
+    <culture locale-id="1135" written-from="LtoR">
+        <name lang="ja">グリーンランド語 (グリーンランド)</name>
+        <name lang="en">Greenlandic (Greenland)</name>
+        <code type="three-letter">kal</code>
+    </culture>
+    <culture locale-id="1136" written-from="LtoR">
+        <name lang="ja">イボ語 (ナイジェリア)</name>
+        <name lang="en">Igbo (Nigeria)</name>
+        <code type="three-letter">ibo</code>
+    </culture>
+    <culture locale-id="1144" written-from="LtoR">
+        <name lang="ja">イ語 (中国)</name>
+        <name lang="en">Yi (PRC)</name>
+        <code type="three-letter">iii</code>
+    </culture>
+    <culture locale-id="1146" written-from="LtoR">
+        <name lang="ja">マプドゥングン語 (チリ)</name>
+        <name lang="en">Mapudungun (Chile)</name>
+        <code type="three-letter">arn</code>
+    </culture>
+    <culture locale-id="1148" written-from="LtoR">
+        <name lang="ja">モホーク語 (モホーク)</name>
+        <name lang="en">Mohawk (Mohawk)</name>
+        <code type="three-letter">moh</code>
+    </culture>
+    <culture locale-id="1150" written-from="LtoR">
+        <name lang="ja">ブルトン語 (フランス)</name>
+        <name lang="en">Breton (France)</name>
+        <code type="three-letter">bre</code>
+    </culture>
+    <culture locale-id="1152" written-from="RtoL">
+        <name lang="ja">ウイグル語 (中国)</name>
+        <name lang="en">Uyghur (PRC)</name>
+        <code type="three-letter">uig</code>
+    </culture>
+    <culture locale-id="1153" written-from="LtoR">
+        <name lang="ja">マオリ語 (ニュージーランド)</name>
+        <name lang="en">Maori (New Zealand)</name>
+        <code type="three-letter">mri</code>
+    </culture>
+    <culture locale-id="1154" written-from="LtoR">
+        <name lang="ja">オクシタン語 (フランス)</name>
+        <name lang="en">Occitan (France)</name>
+        <code type="three-letter">oci</code>
+    </culture>
+    <culture locale-id="1155" written-from="LtoR">
+        <name lang="ja">コルシカ語 (フランス)</name>
+        <name lang="en">Corsican (France)</name>
+        <code type="three-letter">cos</code>
+    </culture>
+    <culture locale-id="1156" written-from="LtoR">
+        <name lang="ja">アルザス語 (フランス)</name>
+        <name lang="en">Alsatian (France)</name>
+        <code type="three-letter">gsw</code>
+    </culture>
+    <culture locale-id="1157" written-from="LtoR">
+        <name lang="ja">サハ語 (ロシア)</name>
+        <name lang="en">Yakut (Russia)</name>
+        <code type="three-letter">sah</code>
+    </culture>
+    <culture locale-id="1158" written-from="LtoR">
+        <name lang="ja">キチェ語 (グアテマラ)</name>
+        <name lang="en">K'iche (Guatemala)</name>
+        <code type="three-letter">qut</code>
+    </culture>
+    <culture locale-id="1159" written-from="LtoR">
+        <name lang="ja">キニヤルワンダ語 (ルワンダ)</name>
+        <name lang="en">Kinyarwanda (Rwanda)</name>
+        <code type="three-letter">kin</code>
+    </culture>
+    <culture locale-id="1160" written-from="LtoR">
+        <name lang="ja">ウォロフ語 (セネガル)</name>
+        <name lang="en">Wolof (Senegal)</name>
+        <code type="three-letter">wol</code>
+    </culture>
+    <culture locale-id="1164" written-from="RtoL">
+        <name lang="ja">ダリー語 (アフガニスタン)</name>
+        <name lang="en">Dari (Afghanistan)</name>
+        <code type="three-letter">prs</code>
+    </culture>
+    <culture locale-id="1169" written-from="LtoR">
+        <name lang="ja">スコットランド ゲール語 (英国)</name>
+        <name lang="en">Scottish Gaelic (United Kingdom)</name>
+        <code type="three-letter">gla</code>
+    </culture>
+    <culture locale-id="2049" written-from="RtoL">
+        <name lang="ja">アラビア語 (イラク)</name>
+        <name lang="en">Arabic (Iraq)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="2052" written-from="LtoR">
+        <name lang="ja">中国語 (簡体字、中国)</name>
+        <name lang="en">Chinese (Simplified, PRC)</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="2055" written-from="LtoR">
+        <name lang="ja">ドイツ語 (スイス)</name>
+        <name lang="en">German (Switzerland)</name>
+        <code type="three-letter">deu</code>
+    </culture>
+    <culture locale-id="2057" written-from="LtoR">
+        <name lang="ja">英語 (英国)</name>
+        <name lang="en">English (United Kingdom)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="2058" written-from="LtoR">
+        <name lang="ja">スペイン語 (メキシコ)</name>
+        <name lang="en">Spanish (Mexico)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="2060" written-from="LtoR">
+        <name lang="ja">フランス語 (ベルギー)</name>
+        <name lang="en">French (Belgium)</name>
+        <code type="three-letter">fra</code>
+    </culture>
+    <culture locale-id="2064" written-from="LtoR">
+        <name lang="ja">イタリア語 (スイス)</name>
+        <name lang="en">Italian (Switzerland)</name>
+        <code type="three-letter">ita</code>
+    </culture>
+    <culture locale-id="2067" written-from="LtoR">
+        <name lang="ja">オランダ語 (ベルギー)</name>
+        <name lang="en">Dutch (Belgium)</name>
+        <code type="three-letter">nld</code>
+    </culture>
+    <culture locale-id="2068" written-from="LtoR">
+        <name lang="ja">ノルウェー語 ニーノシク (ノルウェー)</name>
+        <name lang="en">Norwegian, Nynorsk (Norway)</name>
+        <code type="three-letter">nno</code>
+    </culture>
+    <culture locale-id="2070" written-from="LtoR">
+        <name lang="ja">ポルトガル語 (ポルトガル)</name>
+        <name lang="en">Portuguese (Portugal)</name>
+        <code type="three-letter">por</code>
+    </culture>
+    <culture locale-id="2074" written-from="LtoR">
+        <name lang="ja">セルビア語 (ラテン、セルビアおよびモンテネグロ (旧))</name>
+        <name lang="en">Serbian (Latin, Serbia and Montenegro (Former))</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="2077" written-from="LtoR">
+        <name lang="ja">スウェーデン語 (フィンランド)</name>
+        <name lang="en">Swedish (Finland)</name>
+        <code type="three-letter">swe</code>
+    </culture>
+    <culture locale-id="2092" written-from="LtoR">
+        <name lang="ja">アゼルバイジャン語 (キリル、アゼルバイジャン)</name>
+        <name lang="en">Azeri (Cyrillic, Azerbaijan)</name>
+        <code type="three-letter">aze</code>
+    </culture>
+    <culture locale-id="2094" written-from="LtoR">
+        <name lang="ja">下ソルブ語 (ドイツ)</name>
+        <name lang="en">Lower Sorbian (Germany)</name>
+        <code type="three-letter">dsb</code>
+    </culture>
+    <culture locale-id="2107" written-from="LtoR">
+        <name lang="ja">北サーミ語 (スウェーデン)</name>
+        <name lang="en">Sami, Northern (Sweden)</name>
+        <code type="three-letter">smf</code>
+    </culture>
+    <culture locale-id="2108" written-from="LtoR">
+        <name lang="ja">アイルランド語 (アイルランド)</name>
+        <name lang="en">Irish (Ireland)</name>
+        <code type="three-letter">gle</code>
+    </culture>
+    <culture locale-id="2110" written-from="LtoR">
+        <name lang="ja">マレー語 (ブルネイ・ダルサラーム国)</name>
+        <name lang="en">Malay (Brunei Darussalam)</name>
+        <code type="three-letter">msa</code>
+    </culture>
+    <culture locale-id="2115" written-from="LtoR">
+        <name lang="ja">ウズベク語 (キリル、ウズベキスタン)</name>
+        <name lang="en">Uzbek (Cyrillic, Uzbekistan)</name>
+        <code type="three-letter">uzb</code>
+    </culture>
+    <culture locale-id="2117" written-from="LtoR">
+        <name lang="ja">バングラ語 (バングラデシュ)</name>
+        <name lang="en">Bengali (Bangladesh)</name>
+        <code type="three-letter">bng</code>
+    </culture>
+    <culture locale-id="2128" written-from="LtoR">
+        <name lang="ja">モンゴル語 (伝統的モンゴル文字、中国)</name>
+        <name lang="en">Mongolian (Traditional Mongolian, PRC)</name>
+        <code type="three-letter">mon</code>
+    </culture>
+    <culture locale-id="2141" written-from="LtoR">
+        <name lang="ja">イヌクティトット語 (ラテン、カナダ)</name>
+        <name lang="en">Inuktitut (Latin, Canada)</name>
+        <code type="three-letter">iku</code>
+    </culture>
+    <culture locale-id="2143" written-from="LtoR">
+        <name lang="ja">タマジット語 (ラテン、アルジェリア)</name>
+        <name lang="en">Tamazight (Latin, Algeria)</name>
+        <code type="three-letter">tzm</code>
+    </culture>
+    <culture locale-id="2155" written-from="LtoR">
+        <name lang="ja">ケチュア語 (エクアドル)</name>
+        <name lang="en">Quechua (Ecuador)</name>
+        <code type="three-letter">que</code>
+    </culture>
+    <culture locale-id="3073" written-from="RtoL">
+        <name lang="ja">アラビア語 (エジプト)</name>
+        <name lang="en">Arabic (Egypt)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="3076" written-from="LtoR">
+        <name lang="ja">中国語 (繁体字、香港)</name>
+        <name lang="en">Chinese (Traditional, Hong Kong S.A.R.)</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="3079" written-from="LtoR">
+        <name lang="ja">ドイツ語 (オーストリア)</name>
+        <name lang="en">German (Austria)</name>
+        <code type="three-letter">deu</code>
+    </culture>
+    <culture locale-id="3081" written-from="LtoR">
+        <name lang="ja">英語 (オーストラリア)</name>
+        <name lang="en">English (Australia)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="3082" written-from="LtoR">
+        <name lang="ja">スペイン語 (スペイン)</name>
+        <name lang="en">Spanish (Spain, International Sort)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="3084" written-from="LtoR">
+        <name lang="ja">フランス語 (カナダ)</name>
+        <name lang="en">French (Canada)</name>
+        <code type="three-letter">fra</code>
+    </culture>
+    <culture locale-id="3098" written-from="LtoR">
+        <name lang="ja">セルビア語 (キリル、セルビアおよびモンテネグロ (旧))</name>
+        <name lang="en">Serbian (Cyrillic, Serbia and Montenegro (Former))</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="3131" written-from="LtoR">
+        <name lang="ja">北サーミ語 (フィンランド)</name>
+        <name lang="en">Sami, Northern (Finland)</name>
+        <code type="three-letter">smg</code>
+    </culture>
+    <culture locale-id="3179" written-from="LtoR">
+        <name lang="ja">ケチュア語 (ペルー)</name>
+        <name lang="en">Quechua (Peru)</name>
+        <code type="three-letter">qup</code>
+    </culture>
+    <culture locale-id="4097" written-from="RtoL">
+        <name lang="ja">アラビア語 (リビア)</name>
+        <name lang="en">Arabic (Libya)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="4100" written-from="LtoR">
+        <name lang="ja">中国語 (簡体字、シンガポール)</name>
+        <name lang="en">Chinese (Simplified, Singapore)</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="4103" written-from="LtoR">
+        <name lang="ja">ドイツ語 (ルクセンブルグ)</name>
+        <name lang="en">German (Luxembourg)</name>
+        <code type="three-letter">deu</code>
+    </culture>
+    <culture locale-id="4105" written-from="LtoR">
+        <name lang="ja">英語 (カナダ)</name>
+        <name lang="en">English (Canada)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="4106" written-from="LtoR">
+        <name lang="ja">スペイン語 (グアテマラ)</name>
+        <name lang="en">Spanish (Guatemala)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="4108" written-from="LtoR">
+        <name lang="ja">フランス語 (スイス)</name>
+        <name lang="en">French (Switzerland)</name>
+        <code type="three-letter">fra</code>
+    </culture>
+    <culture locale-id="4122" written-from="LtoR">
+        <name lang="ja">クロアチア語 (ラテン、ボスニア ヘルツェゴビナ)</name>
+        <name lang="en">Croatian (Latin, Bosnia and Herzegovina)</name>
+        <code type="three-letter">hrb</code>
+    </culture>
+    <culture locale-id="4155" written-from="LtoR">
+        <name lang="ja">ルレ サーミ語 (ノルウェー)</name>
+        <name lang="en">Sami, Lule (Norway)</name>
+        <code type="three-letter">smj</code>
+    </culture>
+    <culture locale-id="5121" written-from="RtoL">
+        <name lang="ja">アラビア語 (アルジェリア)</name>
+        <name lang="en">Arabic (Algeria)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="5124" written-from="LtoR">
+        <name lang="ja">中国語 (繁体字、マカオ)</name>
+        <name lang="en">Chinese (Traditional, Macao S.A.R.)</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="5127" written-from="LtoR">
+        <name lang="ja">ドイツ語 (リヒテンシュタイン)</name>
+        <name lang="en">German (Liechtenstein)</name>
+        <code type="three-letter">deu</code>
+    </culture>
+    <culture locale-id="5129" written-from="LtoR">
+        <name lang="ja">英語 (ニュージーランド)</name>
+        <name lang="en">English (New Zealand)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="5130" written-from="LtoR">
+        <name lang="ja">スペイン語 (コスタリカ)</name>
+        <name lang="en">Spanish (Costa Rica)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="5132" written-from="LtoR">
+        <name lang="ja">フランス語 (ルクセンブルグ)</name>
+        <name lang="en">French (Luxembourg)</name>
+        <code type="three-letter">fra</code>
+    </culture>
+    <culture locale-id="5146" written-from="LtoR">
+        <name lang="ja">ボスニア語 (ラテン、ボスニア ヘルツェゴビナ)</name>
+        <name lang="en">Bosnian (Latin, Bosnia and Herzegovina)</name>
+        <code type="three-letter">bsb</code>
+    </culture>
+    <culture locale-id="5179" written-from="LtoR">
+        <name lang="ja">ルレ サーミ語 (スウェーデン)</name>
+        <name lang="en">Sami, Lule (Sweden)</name>
+        <code type="three-letter">smk</code>
+    </culture>
+    <culture locale-id="6145" written-from="RtoL">
+        <name lang="ja">アラビア語 (モロッコ)</name>
+        <name lang="en">Arabic (Morocco)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="6153" written-from="LtoR">
+        <name lang="ja">英語 (アイルランド)</name>
+        <name lang="en">English (Ireland)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="6154" written-from="LtoR">
+        <name lang="ja">スペイン語 (パナマ)</name>
+        <name lang="en">Spanish (Panama)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="6156" written-from="LtoR">
+        <name lang="ja">フランス語 (モナコ)</name>
+        <name lang="en">French (Monaco)</name>
+        <code type="three-letter">fra</code>
+    </culture>
+    <culture locale-id="6170" written-from="LtoR">
+        <name lang="ja">セルビア語 (ラテン、ボスニア ヘルツェゴビナ)</name>
+        <name lang="en">Serbian (Latin, Bosnia and Herzegovina)</name>
+        <code type="three-letter">srs</code>
+    </culture>
+    <culture locale-id="6203" written-from="LtoR">
+        <name lang="ja">南サーミ語 (ノルウェー)</name>
+        <name lang="en">Sami, Southern (Norway)</name>
+        <code type="three-letter">sma</code>
+    </culture>
+    <culture locale-id="7169" written-from="RtoL">
+        <name lang="ja">アラビア語 (チュニジア)</name>
+        <name lang="en">Arabic (Tunisia)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="7177" written-from="LtoR">
+        <name lang="ja">英語 (南アフリカ)</name>
+        <name lang="en">English (South Africa)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="7178" written-from="LtoR">
+        <name lang="ja">スペイン語 (ドミニカ共和国)</name>
+        <name lang="en">Spanish (Dominican Republic)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="7194" written-from="LtoR">
+        <name lang="ja">セルビア語 (キリル、ボスニア ヘルツェゴビナ)</name>
+        <name lang="en">Serbian (Cyrillic, Bosnia and Herzegovina)</name>
+        <code type="three-letter">srn</code>
+    </culture>
+    <culture locale-id="7227" written-from="LtoR">
+        <name lang="ja">南サーミ語 (スウェーデン)</name>
+        <name lang="en">Sami, Southern (Sweden)</name>
+        <code type="three-letter">smb</code>
+    </culture>
+    <culture locale-id="8193" written-from="RtoL">
+        <name lang="ja">アラビア語 (オマーン)</name>
+        <name lang="en">Arabic (Oman)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="8201" written-from="LtoR">
+        <name lang="ja">英語 (ジャマイカ)</name>
+        <name lang="en">English (Jamaica)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="8202" written-from="LtoR">
+        <name lang="ja">スペイン語 (ベネズエラ ボリバル共和国)</name>
+        <name lang="en">Spanish (Bolivarian Republic of Venezuela)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="8218" written-from="LtoR">
+        <name lang="ja">ボスニア語 (キリル、ボスニア ヘルツェゴビナ)</name>
+        <name lang="en">Bosnian (Cyrillic, Bosnia and Herzegovina)</name>
+        <code type="three-letter">bsc</code>
+    </culture>
+    <culture locale-id="8251" written-from="LtoR">
+        <name lang="ja">スコルト サーミ語 (フィンランド)</name>
+        <name lang="en">Sami, Skolt (Finland)</name>
+        <code type="three-letter">sms</code>
+    </culture>
+    <culture locale-id="9217" written-from="RtoL">
+        <name lang="ja">アラビア語 (イエメン)</name>
+        <name lang="en">Arabic (Yemen)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="9225" written-from="LtoR">
+        <name lang="ja">英語 (カリブ)</name>
+        <name lang="en">English (Caribbean)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="9226" written-from="LtoR">
+        <name lang="ja">スペイン語 (コロンビア)</name>
+        <name lang="en">Spanish (Colombia)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="9242" written-from="LtoR">
+        <name lang="ja">セルビア語 (ラテン、セルビア)</name>
+        <name lang="en">Serbian (Latin, Serbia)</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="9275" written-from="LtoR">
+        <name lang="ja">イナリ サーミ語 (フィンランド)</name>
+        <name lang="en">Sami, Inari (Finland)</name>
+        <code type="three-letter">smn</code>
+    </culture>
+    <culture locale-id="10241" written-from="RtoL">
+        <name lang="ja">アラビア語 (シリア)</name>
+        <name lang="en">Arabic (Syria)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="10249" written-from="LtoR">
+        <name lang="ja">英語 (ベリーズ)</name>
+        <name lang="en">English (Belize)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="10250" written-from="LtoR">
+        <name lang="ja">スペイン語 (ペルー)</name>
+        <name lang="en">Spanish (Peru)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="10266" written-from="LtoR">
+        <name lang="ja">セルビア語 (キリル、セルビア)</name>
+        <name lang="en">Serbian (Cyrillic, Serbia)</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="11265" written-from="RtoL">
+        <name lang="ja">アラビア語 (ヨルダン)</name>
+        <name lang="en">Arabic (Jordan)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="11273" written-from="LtoR">
+        <name lang="ja">英語 (トリニダード・トバゴ)</name>
+        <name lang="en">English (Trinidad and Tobago)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="11274" written-from="LtoR">
+        <name lang="ja">スペイン語 (アルゼンチン)</name>
+        <name lang="en">Spanish (Argentina)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="11290" written-from="LtoR">
+        <name lang="ja">セルビア語 (ラテン、モンテネグロ)</name>
+        <name lang="en">Serbian (Latin, Montenegro)</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="12289" written-from="RtoL">
+        <name lang="ja">アラビア語 (レバノン)</name>
+        <name lang="en">Arabic (Lebanon)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="12297" written-from="LtoR">
+        <name lang="ja">英語 (ジンバブエ)</name>
+        <name lang="en">English (Zimbabwe)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="12298" written-from="LtoR">
+        <name lang="ja">スペイン語 (エクアドル)</name>
+        <name lang="en">Spanish (Ecuador)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="12314" written-from="LtoR">
+        <name lang="ja">セルビア語 (キリル、モンテネグロ)</name>
+        <name lang="en">Serbian (Cyrillic, Montenegro)</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="13313" written-from="RtoL">
+        <name lang="ja">アラビア語 (クウェート)</name>
+        <name lang="en">Arabic (Kuwait)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="13321" written-from="LtoR">
+        <name lang="ja">英語 (フィリピン共和国)</name>
+        <name lang="en">English (Republic of the Philippines)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="13322" written-from="LtoR">
+        <name lang="ja">スペイン語 (チリ)</name>
+        <name lang="en">Spanish (Chile)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="14337" written-from="RtoL">
+        <name lang="ja">アラビア語 (アラブ首長国連邦)</name>
+        <name lang="en">Arabic (U.A.E.)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="14346" written-from="LtoR">
+        <name lang="ja">スペイン語 (ウルグアイ)</name>
+        <name lang="en">Spanish (Uruguay)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="15361" written-from="RtoL">
+        <name lang="ja">アラビア語 (バーレーン)</name>
+        <name lang="en">Arabic (Bahrain)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="15370" written-from="LtoR">
+        <name lang="ja">スペイン語 (パラグアイ)</name>
+        <name lang="en">Spanish (Paraguay)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="16385" written-from="RtoL">
+        <name lang="ja">アラビア語 (カタール)</name>
+        <name lang="en">Arabic (Qatar)</name>
+        <code type="three-letter">ara</code>
+    </culture>
+    <culture locale-id="16393" written-from="LtoR">
+        <name lang="ja">英語 (インド)</name>
+        <name lang="en">English (India)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="16394" written-from="LtoR">
+        <name lang="ja">スペイン語 (ボリビア)</name>
+        <name lang="en">Spanish (Bolivia)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="17417" written-from="LtoR">
+        <name lang="ja">英語 (マレーシア)</name>
+        <name lang="en">English (Malaysia)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="17418" written-from="LtoR">
+        <name lang="ja">スペイン語 (エルサルバドル)</name>
+        <name lang="en">Spanish (El Salvador)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="18441" written-from="LtoR">
+        <name lang="ja">英語 (シンガポール)</name>
+        <name lang="en">English (Singapore)</name>
+        <code type="three-letter">eng</code>
+    </culture>
+    <culture locale-id="18442" written-from="LtoR">
+        <name lang="ja">スペイン語 (ホンジュラス)</name>
+        <name lang="en">Spanish (Honduras)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="19466" written-from="LtoR">
+        <name lang="ja">スペイン語 (ニカラグア)</name>
+        <name lang="en">Spanish (Nicaragua)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="20490" written-from="LtoR">
+        <name lang="ja">スペイン語 (プエルトリコ)</name>
+        <name lang="en">Spanish (Puerto Rico)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="21514" written-from="LtoR">
+        <name lang="ja">スペイン語 (米国)</name>
+        <name lang="en">Spanish (United States)</name>
+        <code type="three-letter">spa</code>
+    </culture>
+    <culture locale-id="25626" written-from="LtoR">
+        <name lang="ja">ボスニア語 (キリル)</name>
+        <name lang="en">Bosnian (Cyrillic)</name>
+        <code type="three-letter">bsc</code>
+    </culture>
+    <culture locale-id="26650" written-from="LtoR">
+        <name lang="ja">ボスニア語 (ラテン)</name>
+        <name lang="en">Bosnian (Latin)</name>
+        <code type="three-letter">bsb</code>
+    </culture>
+    <culture locale-id="27674" written-from="LtoR">
+        <name lang="ja">セルビア語 (キリル)</name>
+        <name lang="en">Serbian (Cyrillic)</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="28698" written-from="LtoR">
+        <name lang="ja">セルビア語 (ラテン)</name>
+        <name lang="en">Serbian (Latin)</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="28731" written-from="LtoR">
+        <name lang="ja">サーミ語 (イナリ)</name>
+        <name lang="en">Sami (Inari)</name>
+        <code type="three-letter">smn</code>
+    </culture>
+    <culture locale-id="29740" written-from="LtoR">
+        <name lang="ja">アゼルバイジャン語 (キリル)</name>
+        <name lang="en">Azeri (Cyrillic)</name>
+        <code type="three-letter">aze</code>
+    </culture>
+    <culture locale-id="29755" written-from="LtoR">
+        <name lang="ja">サーミ語 (スコルト)</name>
+        <name lang="en">Sami (Skolt)</name>
+        <code type="three-letter">sms</code>
+    </culture>
+    <culture locale-id="30724" written-from="LtoR">
+        <name lang="ja">中国語</name>
+        <name lang="en">Chinese</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="30740" written-from="LtoR">
+        <name lang="ja">ノルウェー語 (ニーノシュク)</name>
+        <name lang="en">Norwegian (Nynorsk)</name>
+        <code type="three-letter">nno</code>
+    </culture>
+    <culture locale-id="30746" written-from="LtoR">
+        <name lang="ja">ボスニア語</name>
+        <name lang="en">Bosnian</name>
+        <code type="three-letter">bsb</code>
+    </culture>
+    <culture locale-id="30764" written-from="LtoR">
+        <name lang="ja">アゼルバイジャン語 (ラテン)</name>
+        <name lang="en">Azeri (Latin)</name>
+        <code type="three-letter">aze</code>
+    </culture>
+    <culture locale-id="30779" written-from="LtoR">
+        <name lang="ja">サーミ語 (南)</name>
+        <name lang="en">Sami (Southern)</name>
+        <code type="three-letter">smb</code>
+    </culture>
+    <culture locale-id="30787" written-from="LtoR">
+        <name lang="ja">ウズベク語 (キリル)</name>
+        <name lang="en">Uzbek (Cyrillic)</name>
+        <code type="three-letter">uzb</code>
+    </culture>
+    <culture locale-id="30800" written-from="LtoR">
+        <name lang="ja">モンゴル語 (キリル)</name>
+        <name lang="en">Mongolian (Cyrillic)</name>
+        <code type="three-letter">mon</code>
+    </culture>
+    <culture locale-id="30813" written-from="LtoR">
+        <name lang="ja">イヌクティトット語 (音節)</name>
+        <name lang="en">Inuktitut (Syllabics)</name>
+        <code type="three-letter">iku</code>
+    </culture>
+    <culture locale-id="31748" written-from="LtoR">
+        <name lang="ja">繁体字中国語</name>
+        <name lang="en">Chinese (Traditional)</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="31764" written-from="LtoR">
+        <name lang="ja">ノルウェー語 (ブークモール)</name>
+        <name lang="en">Norwegian (Bokmål)</name>
+        <code type="three-letter">nob</code>
+    </culture>
+    <culture locale-id="31770" written-from="LtoR">
+        <name lang="ja">セルビア語</name>
+        <name lang="en">Serbian</name>
+        <code type="three-letter">srp</code>
+    </culture>
+    <culture locale-id="31784" written-from="LtoR">
+        <name lang="ja">タジク語 (キリル)</name>
+        <name lang="en">Tajik (Cyrillic)</name>
+        <code type="three-letter">tgk</code>
+    </culture>
+    <culture locale-id="31790" written-from="LtoR">
+        <name lang="ja">下ソルブ語</name>
+        <name lang="en">Lower Sorbian</name>
+        <code type="three-letter">dsb</code>
+    </culture>
+    <culture locale-id="31803" written-from="LtoR">
+        <name lang="ja">サーミ語 (ルレ)</name>
+        <name lang="en">Sami (Lule)</name>
+        <code type="three-letter">smk</code>
+    </culture>
+    <culture locale-id="31811" written-from="LtoR">
+        <name lang="ja">ウズベク語 (ラテン)</name>
+        <name lang="en">Uzbek (Latin)</name>
+        <code type="three-letter">uzb</code>
+    </culture>
+    <culture locale-id="31824" written-from="LtoR">
+        <name lang="ja">モンゴル語 (伝統的モンゴル文字)</name>
+        <name lang="en">Mongolian (Traditional Mongolian)</name>
+        <code type="three-letter">mon</code>
+    </culture>
+    <culture locale-id="31837" written-from="LtoR">
+        <name lang="ja">イヌクティトット語 (ラテン)</name>
+        <name lang="en">Inuktitut (Latin)</name>
+        <code type="three-letter">iku</code>
+    </culture>
+    <culture locale-id="31839" written-from="LtoR">
+        <name lang="ja">タマジット語 (ラテン)</name>
+        <name lang="en">Tamazight (Latin)</name>
+        <code type="three-letter">tzm</code>
+    </culture>
+    <culture locale-id="31848" written-from="LtoR">
+        <name lang="ja">ハウサ語 (ラテン)</name>
+        <name lang="en">Hausa (Latin)</name>
+        <code type="three-letter">hau</code>
+    </culture>
+    <culture locale-id="4" written-from="LtoR">
+        <name lang="ja">簡体字中国語レガシ</name>
+        <name lang="en">Chinese (Simplified) Legacy</name>
+        <code type="three-letter">zho</code>
+    </culture>
+    <culture locale-id="31748" written-from="LtoR">
+        <name lang="ja">繁体字中国語レガシ</name>
+        <name lang="en">Chinese (Traditional) Legacy</name>
+        <code type="three-letter">zho</code>
+    </culture>
+</cultures>
