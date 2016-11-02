@@ -1,5 +1,4 @@
-﻿using Saxon.Api;
-using Schematron.Insight.Processors;
+﻿using Schematron.Insight.Processors;
 using Schematron.Insight.Utilities;
 using Schematron.Insight.Validation;
 using System;
@@ -235,8 +234,6 @@ namespace Schematron.Insight
         private ResultCollection CheckWellFormat(string xmlfile)
         {
             ResultCollection results = new ResultCollection();
-            // XmlReader Validationは使わない
-            // jats dtdのエンティティエラーがすごい
             XmlReaderSettings settings = new XmlReaderSettings()
             {
                 DtdProcessing = DtdProcessing.Parse,
@@ -258,7 +255,6 @@ namespace Schematron.Insight
             };
             try
             {
-                //XmlReader reader = XmlReader.Create(xmlfile, settings);
                 XmlReader reader = XmlReader.Create(xmlfile, new XmlReaderSettings());
                 while (reader.Read()) ;
             }

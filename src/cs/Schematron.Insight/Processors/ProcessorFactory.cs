@@ -7,6 +7,9 @@ using System.Xml;
 
 namespace Schematron.Insight.Processors
 {
+    /// <summary>
+    /// スキマトロン形式変換クラス
+    /// </summary>
     internal class ProcessorFactory : IDisposable
     {
         #region Private Properties

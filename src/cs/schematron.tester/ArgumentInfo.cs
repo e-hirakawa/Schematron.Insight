@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using System.Text.RegularExpressions;
 
 namespace schematron.tester.cui
 {
+    /// <summary>
+    /// 実行時パラメータ情報
+    /// </summary>
     public class ArgumentInfo
     {
         private string Separator = new String('*', 50);
@@ -22,6 +24,9 @@ namespace schematron.tester.cui
         private FileInfo _outfile = null;
         #endregion  
         #region Public Properties
+        /// <summary>
+        /// 検証対象XMLファイルリスト
+        /// </summary>
         public List<FileInfo> XmlFiles
         {
             get
@@ -46,6 +51,9 @@ namespace schematron.tester.cui
                 return _xmlfiles;
             }
         }
+        /// <summary>
+        /// スキマトロンファイル
+        /// </summary>
         public FileInfo SchFile
         {
             get
@@ -58,6 +66,9 @@ namespace schematron.tester.cui
                 return _schfile;
             }
         }
+        /// <summary>
+        /// レポートファイル
+        /// </summary>
         public FileInfo OutFile
         {
             get
@@ -70,8 +81,17 @@ namespace schematron.tester.cui
                 return _outfile;
             }
         }
+        /// <summary>
+        /// レポート形式
+        /// </summary>
         public string OutFormat => _OutFormat.Value?.ToString() ?? "";
+        /// <summary>
+        /// 検証フェーズ
+        /// </summary>
         public string Phase => _Phase.Value?.ToString() ?? "";
+        /// <summary>
+        /// ヘルプ
+        /// </summary>
         public bool Help => (_Help.Value is Boolean) ? (Boolean)_Help.Value : false;
         #endregion
         #region ArgumentItem
@@ -140,6 +160,10 @@ namespace schematron.tester.cui
             _appPermisson = copyright?.Copyright ?? "";
             #endregion
         }
+        /// <summary>
+        /// 引数読み込み
+        /// </summary>
+        /// <param name="args"></param>
         public void Load(string[] args)
         {
             try
@@ -188,6 +212,9 @@ namespace schematron.tester.cui
                 PrintHelp();
             }
         }
+        /// <summary>
+        /// 実行可能判定
+        /// </summary>
         public bool IsEnabled
         {
             get
@@ -264,6 +291,10 @@ namespace schematron.tester.cui
 
             Console.WriteLine("--");
         }
+        /// <summary>
+        /// アプリケーション名、バージョンなどの
+        /// コンソール出力
+        /// </summary>
         public void PrintHeader()
         {
             Console.Title = $"{_appName} -ver.{_appVersion}";
@@ -279,50 +310,6 @@ namespace schematron.tester.cui
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
             Console.WriteLine(Separator);
-
-            //foreach (ConsoleColor color in Enum.GetValues(typeof(ConsoleColor)))
-            //{
-            //    Console.ForegroundColor = color;
-            //    Console.WriteLine(color.ToString());
-            //}
-
-        }
-    }
-    public class ArgumentItem
-    {
-        public static string OPERATOR = "=";
-        public string[] Keys { get; set; } = new string[] { };
-        public string Name { get; set; } = "";
-        public bool IsRequired { get; set; } = false;
-        public bool IsOmitValue { get; set; } = false;
-        public string[] TrustOfValues = new string[] { };
-        public string Description { get; set; } = "";
-        public object Value { get; set; } = null;
-        public bool IsMatch(string arg)
-        {
-            foreach (string key in Keys)
-            {
-                string pattern = key + (!IsOmitValue ? OPERATOR + "(?<v>.*)" : "");
-                Regex regex = new Regex(pattern, RegexOptions.IgnoreCase);
-                Match mc = regex.Match(arg);
-                if (mc.Success)
-                {
-                    if (!IsOmitValue)
-                    {
-                        Value = mc.Groups["v"].Value;
-                    }
-                    return true;
-                }
-            }
-            return false;
-        }
-        public bool ContainsTrust()
-        {
-            string value = Value.ToString().ToLower();
-            foreach (string item in TrustOfValues)
-                if (item.ToLower() == value)
-                    return true;
-            return false;
         }
     }
 }
