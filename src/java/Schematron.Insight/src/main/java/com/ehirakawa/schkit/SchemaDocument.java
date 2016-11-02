@@ -1,4 +1,4 @@
-package com.schkit;
+package com.ehirakawa.schkit;
 
 public class SchemaDocument {
 
