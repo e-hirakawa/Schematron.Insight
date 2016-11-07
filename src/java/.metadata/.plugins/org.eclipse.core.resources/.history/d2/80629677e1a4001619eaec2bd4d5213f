@@ -1,0 +1,8 @@
+package jp.gr.java_conf.schkit;
+
+public class Snippet {
+	public static void main(String[] args) {
+		ExportFormats
+	}
+}
+
