@@ -1,0 +1,39 @@
+package jp.gr.java_conf.schkit;
+
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLClassLoader;
+import java.nio.file.Path;
+import java.util.jar.Attributes;
+import java.util.jar.Manifest;
+
+final class ApplicationInfo {
+	private String name = null;
+	private String version = null;
+	private String company = null;
+	private Path executeDirectory = null;
+	private Path workingDirectory = null;
+
+	ApplicationInfo() throws Exception {
+		URLClassLoader cl = (URLClassLoader) getClass().getClassLoader();
+		String val;
+		try {
+			URL url = cl.findResource("META-INF/MANIFEST.MF");
+			Manifest manifest = new Manifest(url.openStream());
+			if (manifest != null) {
+				Attributes attr = manifest.getMainAttributes();
+				val = attr.getValue("Implementation-Title");
+				name = val != null ? val : "";
+				val = attr.getValue("Implementation-Version");
+				version = val != null ? val : "";
+			}
+			// do stuff with it
+		} catch (IOException e) {
+			throw e;
+		}
+	}
+
+	static String name() {
+		return name;
+	}
+}

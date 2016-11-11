@@ -1,0 +1,13 @@
+package jp.gr.java_conf.schkit;
+
+import java.nio.file.Path;
+public class LibraryInfo {
+	private static String name;
+	private static String version;
+	private static String company;
+	private static Path executeDirectory;
+	private static Path workingDirectory;
+	protected static LibraryInfo(){
+
+	}
+}

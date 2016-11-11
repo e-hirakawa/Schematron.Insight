@@ -1,0 +1,16 @@
+package jp.gr.java_conf.schkit;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+
+		try {
+			ApplicationInfo appinfo = new ApplicationInfo();
+			System.out.printf("name:%s%n", appinfo.name());
+			System.out.printf("version:%s%n", appinfo.version());
+		} catch (Exception e) {
+
+		}
+	}
+
+}

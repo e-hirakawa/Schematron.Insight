@@ -1,0 +1,15 @@
+package jp.gr.java_conf.schkit;
+
+public class TestClass {
+
+	public static void main(String[] args) {
+
+		try {
+
+			ApplicationInfo.
+		} catch (Exception e) {
+
+		}
+	}
+
+}

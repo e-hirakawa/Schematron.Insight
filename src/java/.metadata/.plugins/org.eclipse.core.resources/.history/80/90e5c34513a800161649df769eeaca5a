@@ -1,0 +1,12 @@
+package jp.gr.java_conf.schkit.validation;
+
+public enum ResultStatus {
+
+	private final int id;
+	private final String name;
+
+	private ResultStatus(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+}

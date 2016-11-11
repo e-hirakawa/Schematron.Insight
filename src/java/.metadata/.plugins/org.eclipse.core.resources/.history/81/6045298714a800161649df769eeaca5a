@@ -1,0 +1,23 @@
+package jp.gr.java_conf.schkit.validation;
+
+import java.nio.file.Path;
+
+public class Result {
+	private Path xmlFile;
+	private Path schFile;
+	private String xmlName;
+	private String schName;
+	public Path getXmlFile() {
+		return xmlFile;
+	}
+	public void setXmlFile(Path xmlfile) {
+		this.xmlFile = xmlfile;
+	}
+	public Path getSchFile() {
+		return schFile;
+	}
+	public void setSchFile(Path schfile) {
+		this.schFile = schfile;
+	}
+
+}

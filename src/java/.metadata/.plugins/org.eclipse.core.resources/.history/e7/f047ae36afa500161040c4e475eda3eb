@@ -1,0 +1,13 @@
+package jp.gr.java_conf.schkit;
+
+import java.nio.file.Path;
+public final class ApplicationInfo {
+	private static String name = null;
+	private static String version= null;
+	private static String company= null;
+	private static Path executeDirectory= null;
+	private static Path workingDirectory= null;
+	private ApplicationInfo(){
+
+	}
+}

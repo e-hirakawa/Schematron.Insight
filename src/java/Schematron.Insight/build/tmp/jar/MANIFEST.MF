@@ -1,2 +1,8 @@
 Manifest-Version: 1.0
+Implementation-Title: Schematron.Insight
+License: Mozilla Public License Version 2.0 (https://www.mozilla.org/e
+ n-US/MPL/2.0/)
+Implementation-Version: 0.1
+Created-By: Eiji Hirakawa
+Main-Class: jp.gr.java_conf.schkit.Program
 

@@ -1,0 +1,20 @@
+package jp.gr.java_conf.schkit;
+
+import java.nio.file.Path;
+public final class LibraryInfo {
+	private static final LibraryInfo instance = new LibraryInfo();
+
+	private static String name;
+	private static String version;
+	private static String company;
+	private static Path executeDirectory;
+	private static Path workingDirectory;
+	private LibraryInfo(){
+
+	}
+
+	public static LibraryInfo getInstance()
+	{
+		return instance;
+	}
+}
