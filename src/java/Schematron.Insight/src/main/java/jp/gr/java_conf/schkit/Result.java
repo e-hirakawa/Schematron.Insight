@@ -2,8 +2,6 @@ package jp.gr.java_conf.schkit;
 
 import java.nio.file.Path;
 
-import javax.management.relation.Role;
-
 import jp.gr.java_conf.schkit.enums.ResultStatus;
 
 /**
@@ -182,7 +180,10 @@ public class Result {
 	/**
 	 * @param schematron role infomation
 	 */
-	public void setRole(Role role) {
-		this.role = role;
-	}
+    public void setRole(Role role) {
+        this.role = role;
+    }
+    public void setRole(String name) {
+        this.role = new Role(name);
+    }
 }

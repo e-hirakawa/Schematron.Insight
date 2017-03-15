@@ -7,7 +7,6 @@ import java.util.List;
 import jp.gr.java_conf.schkit.enums.ResultStatus;
 
 public class ResultCollection implements Iterable<Result> {
-
 	private ArrayList<Result> items;
 
 	public ResultCollection() {
