@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using System.Reflection;
 
 
 namespace Schematron.Insight
@@ -33,36 +32,5 @@ namespace Schematron.Insight
         /// </summary>
         [Display(Name = "Html")]
         Html = 1 << 3
-    }
-    public static class ExportFormatsHelper
-    {
-
-        public static bool Contains(this ExportFormats target, ExportFormats flags)
-        {
-            return (target & flags) == flags;
-        }
-
-        public static bool NotContains(this ExportFormats target, ExportFormats flags)
-        {
-            return (target & (~flags)) == 0;
-        }
-
-        public static ExportFormats Append(this ExportFormats target, ExportFormats flags)
-        {
-            return target | flags;
-        }
-
-        public static ExportFormats Remove(this ExportFormats target, ExportFormats flags)
-        {
-            return target & (~flags);
-        }
-
-        public static string DisplayName(this ExportFormats value)
-        {
-            FieldInfo info = value.GetType().GetField(value.ToString());
-            var attrs = info.GetCustomAttributes(typeof(DisplayAttribute), false) as DisplayAttribute[];
-
-            return (attrs?.Length ?? 0) > 0 ? attrs[0].Name : value.ToString();
-        }
     }
 }

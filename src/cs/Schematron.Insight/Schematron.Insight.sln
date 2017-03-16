@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 14 for Windows Desktop
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schematron.Insight", "Schematron.Insight.csproj", "{44D4508C-50A2-4C50-9222-AA7D9754EF14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schematron.InsightTests", "..\Schematron.InsightTests\Schematron.InsightTests.csproj", "{5E2DC175-31B9-4AD4-A0C1-1A287E8DB7E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{44D4508C-50A2-4C50-9222-AA7D9754EF14}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44D4508C-50A2-4C50-9222-AA7D9754EF14}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44D4508C-50A2-4C50-9222-AA7D9754EF14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2DC175-31B9-4AD4-A0C1-1A287E8DB7E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2DC175-31B9-4AD4-A0C1-1A287E8DB7E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2DC175-31B9-4AD4-A0C1-1A287E8DB7E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2DC175-31B9-4AD4-A0C1-1A287E8DB7E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

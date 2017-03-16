@@ -1,6 +1,7 @@
 ﻿using Saxon.Api;
 using Schematron.Insight.Utilities;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Xml;
@@ -42,7 +43,7 @@ namespace Schematron.Insight.Processors
             try
             {
                 DirectoryInfo srcdirinfo = new DirectoryInfo(srcdir);
-                FileInfo[] srcfiles = srcdirinfo.GetFiles("*.xsl", SearchOption.AllDirectories);
+                IEnumerable<FileInfo> srcfiles = srcdirinfo.EnumerateFiles("*.xsl", SearchOption.AllDirectories);
                 foreach (FileInfo srcfile in srcfiles)
                 {
                     srcfile.CopyTo(Path.Combine(dstdir, srcfile.Name), true);
@@ -59,7 +60,7 @@ namespace Schematron.Insight.Processors
             Stream sm = null;
             try
             {
-                sm = new FileInfo(path).Open(FileMode.Open, FileAccess.Read, FileShare.Read);
+                sm = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read);
 
                 xslt = CreateTramsformer(sm, new Uri(Path.GetDirectoryName(path)+"/"));
             }

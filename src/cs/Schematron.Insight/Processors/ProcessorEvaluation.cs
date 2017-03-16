@@ -41,23 +41,21 @@ namespace Schematron.Insight.Processors
         }
         public XmlNode SelectNode(string location)
         {
-            XmlNode node = null;
-            XPathSelector xpSel = null;
+            XPathSelector xpSel;
             try
             {
                 xpSel = _compile.Compile(location).Load();
                 xpSel.ContextItem = _dom;
                 foreach (XdmNode xdmn in xpSel)
                 {
-                    node = xdmn.getUnderlyingXmlNode();
-                    break;
+                    return xdmn.getUnderlyingXmlNode();
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            return node;
+            return null;
         }
         public XElement XPathSelectElement(string findAt)
         {

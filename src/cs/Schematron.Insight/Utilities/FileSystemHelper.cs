@@ -14,15 +14,13 @@ namespace Schematron.Insight.Utilities
                 Directory.CreateDirectory(dstdir);
             }
 
-            string[] files = Directory.GetFiles(srcdir);
-            foreach (string file in files)
+            foreach (string file in Directory.EnumerateFiles(srcdir))
             {
                 string dstfile = Path.Combine(dstdir, Path.GetFileName(file));
                 File.Copy(file, dstfile, true);
                 dstfiles.Add(dstfile);
             }
-            string[] dirs = Directory.GetDirectories(srcdir);
-            foreach (string dir in dirs)
+            foreach (string dir in Directory.EnumerateDirectories(srcdir))
             {
                 List<string> buf = CopyDirectory(dir, dstdir);
                 dstfiles.AddRange(buf);
@@ -41,23 +39,32 @@ namespace Schematron.Insight.Utilities
 
         public static void RemoveReadonlyAttribute(DirectoryInfo dirInfo)
         {
-            if ((dirInfo.Attributes & FileAttributes.ReadOnly) ==
-                FileAttributes.ReadOnly)
+            if (dirInfo.Attributes.Contains(FileAttributes.ReadOnly))
+            {
                 dirInfo.Attributes = FileAttributes.Normal;
+            }
             foreach (FileInfo fi in dirInfo.GetFiles())
-                if ((fi.Attributes & FileAttributes.ReadOnly) ==
-                    FileAttributes.ReadOnly)
+            {
+                if (fi.Attributes.Contains(FileAttributes.ReadOnly))
+                {
                     fi.Attributes = FileAttributes.Normal;
-            foreach (DirectoryInfo di in dirInfo.GetDirectories())
+                }
+            }
+            foreach (DirectoryInfo di in dirInfo.EnumerateDirectories())
+            {
                 RemoveReadonlyAttribute(di);
+            }
         }
         public static bool IsLocalDrive(string path)
         {
             string root = Path.GetPathRoot(path);
+
             foreach (DriveInfo info in DriveInfo.GetDrives())
             {
                 if (info.Name == root)
+                {
                     return info.DriveType == DriveType.Fixed;
+                }
             }
             return false;
         }

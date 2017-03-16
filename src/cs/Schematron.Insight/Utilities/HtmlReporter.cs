@@ -245,7 +245,7 @@ namespace Schematron.Insight.Utilities
             td = _doc.CreateElement("td");
 
             attr = GetReportAttribute(result);
-            if (attr!=null)
+            if (attr != null)
             {
                 td.Attributes.Append(attr);
             }
@@ -260,20 +260,26 @@ namespace Schematron.Insight.Utilities
         }
         private XmlAttribute GetReportAttribute(Result result)
         {
-            XmlAttribute attr = null;
             string value = "";
-            if (result.Status == ResultStatus.SyntaxError)
-                value = "result-error";
-            if (result.Status == ResultStatus.Assert)
-                value = "result-assert";
-            if (result.Status == ResultStatus.Report)
-                value = "result-report";
-            if(value!="")
+            switch (result.Status)
             {
-                attr = _doc.CreateAttribute("class");
-                attr.Value = value;
+                case ResultStatus.SyntaxError:
+                    value = "result-error";
+                    break;
+                case ResultStatus.Assert:
+                    value = "result-assert";
+                    break;
+                case ResultStatus.Report:
+                    value = "result-report";
+                    break;
             }
-            return attr;
+            if (value != "")
+            {
+                XmlAttribute attr = _doc.CreateAttribute("class");
+                attr.Value = value;
+                return attr;
+            }
+            return null;
         }
         private string GetResultInfo(Result result)
         {
@@ -304,15 +310,12 @@ namespace Schematron.Insight.Utilities
         }
         private string ReplaceIndent(string str)
         {
-            int limit = 10;
-            int count = 0;
-            while (Regex.IsMatch(str, "(<code.*?>)[ ]{2}"))
+            return Regex.Replace(str, "(<code.*?>)([ ]+)", (m) =>
             {
-                str = Regex.Replace(str, "(<code.*?>)[ ]{2}", "$1\t");
-                if (++count > limit)
-                    break;
-            }
-            return str;
+                string code = m.Groups[1].Value;
+                string space = m.Groups[2].Value;
+                return code + space.Replace(" ", "&nbsp;");
+            });
         }
         #endregion
     }

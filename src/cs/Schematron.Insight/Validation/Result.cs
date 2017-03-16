@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Schematron.Insight.Utilities;
+using System;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Xml;
@@ -58,7 +59,7 @@ namespace Schematron.Insight.Validation
             }
             set
             {
-                Status = ResultStatusHelper.GetValueFromDisplayName(value);
+                Status = EnumerationTypeHelper.GetValueFromDisplayName<ResultStatus>(value);
             }
         }
         [XmlElement(ElementName = "Location", Order = 4)]

@@ -1,4 +1,5 @@
 ﻿using Schematron.Insight;
+using Schematron.Insight.Utilities;
 using Schematron.Insight.Validation;
 using System;
 using System.Collections.Generic;
