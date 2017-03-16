@@ -4,10 +4,12 @@ using Schematron.Validator.Mvvm.Models;
 using Schematron.Validator.Utilities;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 using System.Windows.Input;
 
 namespace Schematron.Validator.Mvvm.ViewModels
@@ -16,7 +18,12 @@ namespace Schematron.Validator.Mvvm.ViewModels
     {
         #region Private Properties
         private ResourceModel _schemaFile;
-
+        private ObservableCollection<ResourceModel> _xmlFiles = new ObservableCollection<ResourceModel>();
+        
+        #endregion
+        #region Public Properties
+        public string Title => $"{ApplicationInfo.Name} -ver.{ApplicationInfo.Version}";
+        
         public ResourceModel SchemaFile
         {
             get { return _schemaFile; }
@@ -24,20 +31,26 @@ namespace Schematron.Validator.Mvvm.ViewModels
             {
                 if (_schemaFile != value)
                 {
-                    _schemaFile = value;
-                    RaisePropertyChanged(() => SchemaFile);
+                    Set(() => SchemaFile, ref _schemaFile, value);
                 }
             }
         }
-
-        #endregion
-        #region Public Properties
-        public string Title => $"{ApplicationInfo.Name} -ver.{ApplicationInfo.Version}";
+        public ObservableCollection<ResourceModel> XmlFiles
+        {
+            get { return _xmlFiles; }
+            set
+            {
+                if(_xmlFiles != value)
+                {
+                    Set(() => XmlFiles, ref _xmlFiles, value);
+                }
+            }
+        }
         #endregion
         #region Constructors
         public MainViewModel(string[] args)
         {
-
+            BindingOperations.EnableCollectionSynchronization(XmlFiles, new object());
         }
         public MainViewModel() : this(new string[] { }) { }
         #endregion
@@ -47,7 +60,11 @@ namespace Schematron.Validator.Mvvm.ViewModels
         bool SchemaSelectCommandCanExecute() => true;
         void SchemaSelectCommandExecute()
         {
-            SchemaFile = new ResourceModel(@"C:\Users\ehirakawa\Downloads\ky964216546910007811.pdf");
+            XmlFiles.Clear();
+            foreach(string file in Directory.EnumerateFiles(@"../../../../../testdata/"))
+            {
+                XmlFiles.Add(new ResourceModel(file));
+            }
         }
 
         #endregion
