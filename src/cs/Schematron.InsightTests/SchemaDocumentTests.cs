@@ -1,14 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Schematron.Insight;
 using Schematron.Insight.Validation;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Schematron.Insight.Tests
 {
@@ -21,7 +17,9 @@ namespace Schematron.Insight.Tests
             string dir = @"../../../../../testdata/";
             List<string> tests = new List<string>()
             {
-                "mimetype", "cultures", "calendar-2017"
+                "mimetype",
+                "cultures",
+                "calendar-2017"
             };
 
             SchemaDocument doc = null;
@@ -42,7 +40,7 @@ namespace Schematron.Insight.Tests
 
                     string testsch = Path.Combine(dir, $"{test}.sch");
                     string testxml = Path.Combine(dir, $"{test}.xml");
-                    string dstfile = Path.Combine(dir, $"{test}-result.html");
+                    string dstfile = Path.Combine(dir, $"{test}-result.json");
                     if (!File.Exists(testsch))
                         throw new FileNotFoundException();
                     if (!File.Exists(testxml))
@@ -54,8 +52,10 @@ namespace Schematron.Insight.Tests
                     doc.Compile(Phase.ALL);
 
                     report.Results = doc.Validation(testxml);
-                    report.Format = ExportFormats.Html;
-#if false
+
+
+                    report.Format = ExportFormats.Json;
+#if true
                     report.Write(dstfile);
 #else
                     // test result
@@ -96,6 +96,55 @@ namespace Schematron.Insight.Tests
                 index++;
             }
             Console.WriteLine(">> {0} {1}\t{2}", n, units[index], suffix);
+        }
+        [TestMethod()]
+        public void ReportReadTest()
+        {
+            string dir = @"../../../../../testdata/";
+            List<string> tests = new List<string>()
+            {
+                "mimetype",
+                "cultures",
+                "calendar-2017"
+            };
+
+            Reporter report = new Reporter();
+            Func<string, string> replacer = new Func<string, string>((str) =>
+            {
+                return Regex.Replace(str, "<div class=\"dateinfo\">(.+?)</div>", "");
+            });
+            try
+            {
+                Stopwatch sw = Stopwatch.StartNew();
+
+                PrintWorkingSet($"start of processing: ({DateTime.Now.ToShortTimeString()})");
+
+                foreach (string test in tests)
+                {
+                    PrintWorkingSet($"pre processing of {test}");
+                    
+                    string dstfile = Path.Combine(dir, $"{test}-result.json");
+                    if (!File.Exists(dstfile))
+                        throw new FileNotFoundException();
+
+                    report.Format = ExportFormats.Json;
+                    report.Read(dstfile);
+
+                    Debug.Print("");
+
+                    PrintWorkingSet($"post processing of {test}");
+                }
+
+                sw.Stop();
+                PrintWorkingSet($"end of processing: ({DateTime.Now.ToShortTimeString()}, {sw.ElapsedMilliseconds} ms)");
+            }
+            catch (Exception ex)
+            {
+                Assert.Fail(ex.Message);
+            }
+            finally
+            {
+            }
         }
     }
 }

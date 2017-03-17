@@ -8,29 +8,34 @@ namespace Schematron.Insight
     public enum ExportFormats : int
     {
         /// <summary>
-        /// formatted log text
+        /// Formatted log text
+        /// Serialize can available, but Deserialize cannot.
         /// </summary>
-        [Display(Name = "Log")]
+        [Display(Name = "Log", Description = "Serialize can available, but Deserialize cannot.")]
         Log = 0,
         /// <summary>
         /// Tab split text
+        /// Serialize can available, but Deserialize cannot.
         /// </summary>
-        [Display(Name = "Tab")]
+        [Display(Name = "Tab", Description = "Serialize can available, but Deserialize cannot.")]
         Tab = 1 << 0,
         /// <summary>
         /// markup text
+        /// Serialize/Deserialize can available
         /// </summary>
-        [Display(Name = "Xml")]
+        [Display(Name = "Xml", Description = "Serialize/Deserialize can available")]
         Xml = 1 << 1,
         /// <summary>
         /// json
+        /// Serialize/Deserialize can available
         /// </summary>
-        [Display(Name = "Json")]
+        [Display(Name = "Json", Description = "Serialize/Deserialize can available")]
         Json = 1 << 2,
         /// <summary>
         /// Html
+        /// Serialize can available, but Deserialize cannot.
         /// </summary>
-        [Display(Name = "Html")]
+        [Display(Name = "Html", Description = "Serialize can available, but Deserialize cannot.")]
         Html = 1 << 3
     }
 }

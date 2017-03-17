@@ -13,8 +13,13 @@ namespace Schematron.Insight.Validation
     public class ResultCollection : IEnumerable<Result>
     {
         private List<Result> _items = new List<Result>();
-
         #region Public Members
+        [DataMember(Name = "result")]
+        public List<Result> Items
+        {
+            get { return _items; }
+            set { _items =value; }
+        }
         [XmlIgnore]
         [IgnoreDataMember]
         public Result this[int index]

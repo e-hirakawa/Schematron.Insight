@@ -1,0 +1,471 @@
+﻿<Report>
+  <ReportBy>Schematron.Insight -v.1.1.6.0-</ReportBy>
+  <WrittenTo>2017.03.17 10:41:00</WrittenTo>
+  <TotalSyntaxError>0</TotalSyntaxError>
+  <TotalAssert>0</TotalAssert>
+  <TotalReport>33</TotalReport>
+  <Results>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[1]</Location>
+      <Line>3</Line>
+      <Pos>6</Pos>
+      <Message>Arabic is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[13]</Location>
+      <Line>63</Line>
+      <Pos>6</Pos>
+      <Message>Hebrew is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[32]</Location>
+      <Line>158</Line>
+      <Pos>6</Pos>
+      <Message>Urdu is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[41]</Location>
+      <Line>203</Line>
+      <Pos>6</Pos>
+      <Message>Persian is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[83]</Location>
+      <Line>413</Line>
+      <Pos>6</Pos>
+      <Message>Syriac is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[90]</Location>
+      <Line>448</Line>
+      <Pos>6</Pos>
+      <Message>Pashto is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[92]</Location>
+      <Line>458</Line>
+      <Pos>6</Pos>
+      <Message>Divehi is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[106]</Location>
+      <Line>528</Line>
+      <Pos>6</Pos>
+      <Message>Uyghur is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[115]</Location>
+      <Line>573</Line>
+      <Pos>6</Pos>
+      <Message>Dari is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[117]</Location>
+      <Line>583</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Saudi Arabia) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[128]</Location>
+      <Line>638</Line>
+      <Pos>6</Pos>
+      <Message>Hebrew (Israel) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[147]</Location>
+      <Line>733</Line>
+      <Pos>6</Pos>
+      <Message>Urdu (Islamic Republic of Pakistan) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[156]</Location>
+      <Line>778</Line>
+      <Pos>6</Pos>
+      <Message>Persian is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[197]</Location>
+      <Line>983</Line>
+      <Pos>6</Pos>
+      <Message>Syriac (Syria) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[203]</Location>
+      <Line>1013</Line>
+      <Pos>6</Pos>
+      <Message>Pashto (Afghanistan) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[205]</Location>
+      <Line>1023</Line>
+      <Pos>6</Pos>
+      <Message>Divehi (Maldives) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[218]</Location>
+      <Line>1088</Line>
+      <Pos>6</Pos>
+      <Message>Uyghur (PRC) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[227]</Location>
+      <Line>1133</Line>
+      <Pos>6</Pos>
+      <Message>Dari (Afghanistan) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[229]</Location>
+      <Line>1143</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Iraq) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[252]</Location>
+      <Line>1258</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Egypt) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[261]</Location>
+      <Line>1303</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Libya) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[269]</Location>
+      <Line>1343</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Algeria) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[277]</Location>
+      <Line>1383</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Morocco) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[283]</Location>
+      <Line>1413</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Tunisia) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[288]</Location>
+      <Line>1438</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Oman) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[293]</Location>
+      <Line>1463</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Yemen) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[298]</Location>
+      <Line>1488</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Syria) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[302]</Location>
+      <Line>1508</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Jordan) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[306]</Location>
+      <Line>1528</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Lebanon) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[310]</Location>
+      <Line>1548</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Kuwait) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[313]</Location>
+      <Line>1563</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (U.A.E.) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[315]</Location>
+      <Line>1573</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Bahrain) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>cultures.xml</XmlFile>
+      <SchemaFile>cultures.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/cultures[1]/culture[317]</Location>
+      <Line>1583</Line>
+      <Pos>6</Pos>
+      <Message>Arabic (Qatar) is written from Right to Left.
+</Message>
+      <Test>@written-from='RtoL'</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+  </Results>
+</Report>

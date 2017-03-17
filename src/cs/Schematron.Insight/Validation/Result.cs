@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 namespace Schematron.Insight.Validation
 {
     [Serializable()]
-    [DataContract]
+    [DataContract(Name ="result")]
     public class Result
     {
         private FileInfo _xmlfile;

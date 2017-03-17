@@ -18,6 +18,13 @@ namespace Schematron.Insight.Validation
     [DataContract(Name = "Report")]
     public class Reporter
     {
+        #region ReadOnly Field
+        private readonly static DataContractJsonSerializer jsonSerializer =
+            new DataContractJsonSerializer(typeof(Reporter));
+        private readonly static XmlSerializer xmlSerializer =
+            new XmlSerializer(typeof(Reporter));
+        private readonly static Encoding UTF8 = Encoding.UTF8;
+        #endregion
         #region Private Properties
         private ResultCollection _results = new ResultCollection();
         #endregion
@@ -92,7 +99,7 @@ namespace Schematron.Insight.Validation
             return stream;
         }
         #endregion
-        #region ToString
+        #region Serializer
         public string ToString(ExportFormats format)
         {
             string str = "";
@@ -225,14 +232,13 @@ namespace Schematron.Insight.Validation
         {
             string str = "";
             StringWriter sw = null;
-            XmlSerializer ser = null;
             XmlWriter xw = null;
             XmlSerializerNamespaces ns = null;
             try
             {
                 XmlWriterSettings settings = new XmlWriterSettings()
                 {
-                    Encoding = Encoding.UTF8,
+                    Encoding = UTF8,
                     Indent = true,
                     OmitXmlDeclaration = true
                 };
@@ -241,9 +247,8 @@ namespace Schematron.Insight.Validation
 
                 sw = new StringWriter();
                 xw = XmlWriter.Create(sw, settings);
-                ser = new XmlSerializer(typeof(Reporter));
 
-                ser.Serialize(xw, this, ns);
+                xmlSerializer.Serialize(xw, this, ns);
                 str = sw.ToString();
             }
             catch (Exception ex)
@@ -264,12 +269,10 @@ namespace Schematron.Insight.Validation
             string str = "";
             MemoryStream ms = null;
             StreamReader sr = null;
-            DataContractJsonSerializer ser;
             try
             {
                 ms = new MemoryStream();
-                ser = new DataContractJsonSerializer(typeof(Reporter));
-                ser.WriteObject(ms, this);
+                jsonSerializer.WriteObject(ms, this);
                 ms.Position = 0;
                 sr = new StreamReader(ms);
                 str = sr.ReadToEnd();
@@ -316,6 +319,81 @@ namespace Schematron.Insight.Validation
             return str;
         }
         #endregion
+        #region Deserializer
+        public void Deserialize(string path, ExportFormats format)
+        {
+            try
+            {
+                if (format == ExportFormats.Log)
+                    FromLog(path);
+                else if (format == ExportFormats.Tab)
+                    FromTab(path);
+                else if (format == ExportFormats.Xml)
+                    FromXml(path);
+                else if (format == ExportFormats.Json)
+                    FromJson(path);
+                else if (format == ExportFormats.Html)
+                    FromHtml(path);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        private void FromLog(string path)
+        {
+            throw new NotSupportedException();
+        }
+        private void FromTab(string path)
+        {
+            throw new NotSupportedException();
+        }
+        private void FromXml(string path)
+        {
+            StreamReader sr = null;
+            try
+            {
+                sr = new StreamReader(path, UTF8);
+                Reporter repoter = (Reporter)xmlSerializer.Deserialize(sr);
+                Update(repoter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                sr?.Close();
+            }
+        }
+        private void FromJson(string path)
+        {
+            MemoryStream ms = null;
+            try
+            {
+                string str = File.ReadAllText(path, UTF8);
+                byte[] bytes = UTF8.GetBytes(str);
+                ms = new MemoryStream(bytes);
+                Reporter repoter = (Reporter)jsonSerializer.ReadObject(ms);
+                Update(repoter);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                ms?.Close();
+                ms?.Dispose();
+            }
+        }
+        private void FromHtml(string path)
+        {
+            throw new NotSupportedException();
+        }
+
+
+        #endregion
         private class ExportData
         {
             internal int Index { get; set; } = 0;
@@ -323,17 +401,38 @@ namespace Schematron.Insight.Validation
             internal string Value { get; set; } = "";
         }
         #endregion
-        public void Write(string path)
+        #region Report Read/Write
+        public void Read(string path)
         {
             try
             {
-                File.WriteAllText(path, ToString(Format), Encoding.UTF8);
+                Deserialize(path, Format);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
         }
+        public void Write(string path)
+        {
+            try
+            {
+                File.WriteAllText(path, ToString(Format), UTF8);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+        #region Update Method
+        private void Update(Reporter repoter)
+        {
+            ReportBy = repoter.ReportBy;
+            WrittenTo = repoter.WrittenTo;
+            Results = repoter.Results;
+        }
+        #endregion
     }
 
 }

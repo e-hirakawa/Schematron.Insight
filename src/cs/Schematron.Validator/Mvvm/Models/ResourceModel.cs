@@ -14,9 +14,10 @@ using System.Windows.Media.Imaging;
 
 namespace Schematron.Validator.Mvvm.Models
 {
-    public class ResourceModel:ViewModelBase
+    public class ResourceModel : ViewModelBase, IDisposable
     {
         #region Private Properties
+        private string _id;
         private string _fullpath;
         private string _directory;
         private string _filename;
@@ -29,6 +30,18 @@ namespace Schematron.Validator.Mvvm.Models
         #endregion
         #region Public Properties
         /// <summary>
+        /// GUID
+        /// </summary>
+        public string Id
+        {
+            get { return _id; }
+            private set
+            {
+                if (_id != value)
+                    Set(() => Id, ref _id, value);
+            }
+        }
+        /// <summary>
         /// Absolute File Path
         /// </summary>
         public string FullPath
@@ -38,8 +51,7 @@ namespace Schematron.Validator.Mvvm.Models
             {
                 if (_fullpath != value)
                 {
-                    _fullpath = value;
-                    RaisePropertyChanged(() => FullPath);
+                    Set(() => FullPath, ref _fullpath, value);
                     UpdateProperties(value);
                 }
             }
@@ -53,10 +65,7 @@ namespace Schematron.Validator.Mvvm.Models
             private set
             {
                 if (_directory != value)
-                {
-                    _directory = value;
-                    RaisePropertyChanged(() => Directory);
-                }
+                    Set(() => Directory, ref _directory, value);
             }
         }
         /// <summary>
@@ -67,11 +76,8 @@ namespace Schematron.Validator.Mvvm.Models
             get { return _filename; }
             private set
             {
-                if(_filename != value)
-                {
-                    _filename = value;
-                    RaisePropertyChanged(() => Name);
-                }
+                if (_filename != value)
+                    Set(() => Name, ref _filename, value);
             }
         }
 
@@ -84,10 +90,7 @@ namespace Schematron.Validator.Mvvm.Models
             private set
             {
                 if (_filesize != value)
-                {
-                    _filesize = value;
-                    RaisePropertyChanged(() => Size);
-                }
+                    Set(() => Size, ref _filesize, value);
             }
         }
         /// <summary>
@@ -99,10 +102,7 @@ namespace Schematron.Validator.Mvvm.Models
             private set
             {
                 if (_dispsize != value)
-                {
-                    _dispsize = value;
-                    RaisePropertyChanged(() => DisplaySize);
-                }
+                    Set(() => DisplaySize, ref _dispsize, value);
             }
         }
         /// <summary>
@@ -114,10 +114,7 @@ namespace Schematron.Validator.Mvvm.Models
             private set
             {
                 if (_modified != value)
-                {
-                    _modified = value;
-                    RaisePropertyChanged(() => ModifiedDate);
-                }
+                    Set(() => ModifiedDate, ref _modified, value);
             }
         }
         /// <summary>
@@ -129,45 +126,53 @@ namespace Schematron.Validator.Mvvm.Models
             private set
             {
                 if (_dispdate != value)
-                {
-                    _dispdate = value;
-                    RaisePropertyChanged(() => DisplayModifiedDate);
-                }
+                    Set(() => DisplayModifiedDate, ref _dispdate, value);
             }
         }
-
+        /// <summary>
+        /// File Icon
+        /// </summary>
         public ImageSource Icon
         {
             get { return _icon; }
-            private set {
+            private set
+            {
                 if (_icon != value)
-                {
-                    _icon = value;
-                    RaisePropertyChanged(() => Icon);
-                }
+                    Set(() => Icon, ref _icon, value);
             }
         }
         #endregion
         #region Constructors
+        /// <summary>
+        /// ResourceModel Constructor
+        /// </summary>
+        /// <param name="filepath">Resource File Path</param>
         public ResourceModel(string filepath)
         {
+            Id = Guid.NewGuid().ToString("N");
             FullPath = filepath;
         }
-        public ResourceModel(): this(null) { }
+        /// <summary>
+        /// ResourceModel Constructor
+        /// </summary>
+        public ResourceModel() : this(null) { }
         #endregion
         #region Methods
-        public void UpdateProperties()
+        /// <summary>
+        /// 
+        /// </summary>
+        public virtual void UpdateProperties()
         {
             UpdateProperties(FullPath);
         }
-        private void UpdateProperties(string filepath)
+        protected virtual void UpdateProperties(string filepath)
         {
             FileInfo fi = File.Exists(filepath) ? new FileInfo(filepath) : null;
             Directory = fi?.DirectoryName;
             Name = fi?.Name;
             Size = fi?.Length ?? 0;
             DisplaySize = ToDisplaySize(Size);
-            ModifiedDate = fi?.LastWriteTime ;
+            ModifiedDate = fi?.LastWriteTime;
             DisplayModifiedDate = ToDisplayDate(ModifiedDate);
             Icon = CreateBitmapIcon(fi.FullName);
         }
@@ -193,7 +198,7 @@ namespace Schematron.Validator.Mvvm.Models
             }
             return str;
         }
-        private ImageSource CreateBitmapIcon(string fullName)
+        private static ImageSource CreateBitmapIcon(string fullName)
         {
             BitmapSource img = null;
             System.Drawing.Icon icon = null;
@@ -203,6 +208,7 @@ namespace Schematron.Validator.Mvvm.Models
                 icon = ShFileInfo.GetLargeIcon(fullName);
                 rect = new Int32Rect(0, 0, icon.Width, icon.Height);
                 img = Imaging.CreateBitmapSourceFromHIcon(icon.Handle, rect, BitmapSizeOptions.FromEmptyOptions());
+                img.Freeze();
             }
             catch (Exception ex)
             {
@@ -214,6 +220,8 @@ namespace Schematron.Validator.Mvvm.Models
             }
             return img;
         }
+
+        public virtual void Dispose() { }
 
         #endregion
     }

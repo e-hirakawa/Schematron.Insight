@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Schematron.Validator.Mvvm.Views"
         xmlns:vm="clr-namespace:Schematron.Validator.Mvvm.ViewModels"
+        xmlns:conv="clr-namespace:Schematron.Validator.Utilities.Converter"
         mc:Ignorable="d"
         Title="{Binding Title, Mode=OneTime}" Height="300" Width="300">
     <Window.DataContext>
         <vm:MainViewModel />
     </Window.DataContext>
+    <Window.Resources>
+        <conv:BoolToVisibilityConverter x:Key="BoolToVisible" />
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -18,10 +22,29 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <StackPanel>
-                <Button Content="select" Command="{Binding SchemaSelectCommand}" />
+                <Button Content="{Binding Progress.Button.Caption, Mode=OneWay}" 
+                        Command="{Binding ValidationCommand}" />
+                <Button Content="select sch" 
+                        Command="{Binding SchemaSelectCommand}" />
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="1">
+        <StackPanel Grid.Row="1">
+            <Label>sch</Label>
+            <TextBlock Text="{Binding SchemaFile.Name}" />
+            <TextBlock Text="{Binding SchemaFile.DisplaySize}" />
+            <TextBlock Text="{Binding SchemaFile.DisplayModifiedDate}" />
+            <Image Source="{Binding SchemaFile.Icon}" RenderOptions.BitmapScalingMode="HighQuality" Width="36" Height="36"  />
+            <ScrollViewer>
+                <ListView ItemsSource="{Binding SchemaFile.Phases}" SelectedItem="{Binding SchemaFile.SelectedPhase}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Id}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
             <ScrollViewer>
                 <ListView ItemsSource="{Binding XmlFiles}">
                     <ListView.ItemTemplate>
@@ -36,7 +59,25 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </ScrollViewer>
+        </StackPanel>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <ProgressBar Grid.Column="0"
+                         HorizontalAlignment="Stretch" 
+                         Width="300"
+                         Minimum="{Binding Progress.Minimum, Mode=OneWay}"
+                         Maximum="{Binding Progress.Maximum, Mode=OneWay}"
+                         Value="{Binding Progress.Value, Mode=OneWay}"
+                         Visibility="{Binding Progress.IsVisible, Mode=OneWay, Converter={StaticResource BoolToVisible}}" />
+            <TextBlock Grid.Column="0"
+                       VerticalAlignment="Center" 
+                       Text="{Binding Progress.Text, Mode=OneWay}"
+                       Visibility="{Binding Progress.IsVisible, Mode=OneWay, Converter={StaticResource BoolToVisible}}" />
         </Grid>
-        <Grid Grid.Row="2"></Grid>
     </Grid>
 </Window>

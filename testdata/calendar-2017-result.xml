@@ -1,0 +1,79 @@
+﻿<Report>
+  <ReportBy>Schematron.Insight -v.1.1.6.0-</ReportBy>
+  <WrittenTo>2017.03.17 10:41:29</WrittenTo>
+  <TotalSyntaxError>0</TotalSyntaxError>
+  <TotalAssert>0</TotalAssert>
+  <TotalReport>5</TotalReport>
+  <Results>
+    <Result>
+      <XmlFile>calendar-2017.xml</XmlFile>
+      <SchemaFile>calendar-2017.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/year[1]/month[1]/week[1]/day[1]</Location>
+      <Line>4</Line>
+      <Pos>14</Pos>
+      <Message>Holidays at the beginning of the month
+</Message>
+      <Test>@day-of-week='Sunday' and parent::week[@number='1']</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>calendar-2017.xml</XmlFile>
+      <SchemaFile>calendar-2017.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/year[1]/month[1]/week[2]/day[6]</Location>
+      <Line>18</Line>
+      <Pos>14</Pos>
+      <Message>Friday the 13th...
+</Message>
+      <Test>@day-of-week='Friday' and @number='13'</Test>
+      <Role>
+        <name>Warning</name>
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>calendar-2017.xml</XmlFile>
+      <SchemaFile>calendar-2017.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/year[1]/month[10]/week[1]/day[1]</Location>
+      <Line>389</Line>
+      <Pos>14</Pos>
+      <Message>Holidays at the beginning of the month
+</Message>
+      <Test>@day-of-week='Sunday' and parent::week[@number='1']</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>calendar-2017.xml</XmlFile>
+      <SchemaFile>calendar-2017.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/year[1]/month[10]/week[2]/day[6]</Location>
+      <Line>403</Line>
+      <Pos>14</Pos>
+      <Message>Friday the 13th...
+</Message>
+      <Test>@day-of-week='Friday' and @number='13'</Test>
+      <Role>
+        <name>Warning</name>
+      </Role>
+    </Result>
+    <Result>
+      <XmlFile>calendar-2017.xml</XmlFile>
+      <SchemaFile>calendar-2017.sch</SchemaFile>
+      <Status>Report</Status>
+      <Location>/year[1]/month[12]/week[5]/day[2]</Location>
+      <Line>506</Line>
+      <Pos>14</Pos>
+      <Message>Merry Christmas
+</Message>
+      <Test>@number='25' and ancestor::month[@value='12']</Test>
+      <Role>
+        <name />
+      </Role>
+    </Result>
+  </Results>
+</Report>
