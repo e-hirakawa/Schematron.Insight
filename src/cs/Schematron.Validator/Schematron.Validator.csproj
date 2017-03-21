@@ -105,9 +105,11 @@
     </Compile>
     <Compile Include="Mvvm\Models\ProgressButtonModel.cs" />
     <Compile Include="Mvvm\Models\ProgressModel.cs" />
+    <Compile Include="Mvvm\Models\XmlResourceCollection.cs" />
     <Compile Include="Mvvm\Models\ResourceModel.cs" />
     <Compile Include="Mvvm\Models\SchResourceModel.cs" />
     <Compile Include="Mvvm\Models\XmlResourceModel.cs" />
+    <Compile Include="Utilities\Actions\FileDropBehavior.cs" />
     <Compile Include="Utilities\ApplicationInfo.cs" />
     <Compile Include="Utilities\Converter\BoolToVisibilityConverter.cs" />
     <Compile Include="Utilities\Converter\EnumBooleanConverter.cs" />

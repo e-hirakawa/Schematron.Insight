@@ -1,9 +1,4 @@
 ﻿using Schematron.Insight.Validation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Schematron.Validator.Mvvm.Models
 {
@@ -22,6 +17,10 @@ namespace Schematron.Validator.Mvvm.Models
                     Set(() => ResultStatus, ref _resultStatus, value);
             }
         }
+        #endregion
+        #region Constructor
+        public XmlResourceModel(string path): base(path) { }
+        public XmlResourceModel() : this(null) { }
         #endregion
     }
 }

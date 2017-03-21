@@ -3,7 +3,6 @@ using GalaSoft.MvvmLight.CommandWpf;
 using Schematron.Validator.Mvvm.Models;
 using Schematron.Validator.Utilities;
 using System;
-using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
@@ -18,7 +17,9 @@ namespace Schematron.Validator.Mvvm.ViewModels
         #region Private Properties
         private ProgressModel _progress;
         private SchResourceModel _schemaFile;
-        private ObservableCollection<XmlResourceModel> _xmlFiles = new ObservableCollection<XmlResourceModel>();
+        private XmlResourceCollection _xmlFiles = new XmlResourceCollection();
+        private XmlResourceModel _selectedXmlFile;
+
 
 
         #endregion
@@ -48,7 +49,7 @@ namespace Schematron.Validator.Mvvm.ViewModels
                 }
             }
         }
-        public ObservableCollection<XmlResourceModel> XmlFiles
+        public XmlResourceCollection XmlFiles
         {
             get { return _xmlFiles; }
             set
@@ -57,6 +58,13 @@ namespace Schematron.Validator.Mvvm.ViewModels
                 {
                     Set(() => XmlFiles, ref _xmlFiles, value);
                 }
+            }
+        }
+        public XmlResourceModel SelectedXmlFile
+        {
+            get { return _selectedXmlFile; }
+            set {
+                Set(() => SelectedXmlFile, ref _selectedXmlFile, value);
             }
         }
         #endregion
@@ -75,19 +83,33 @@ namespace Schematron.Validator.Mvvm.ViewModels
         /// <summary>
         /// Choose Schematron File
         /// </summary>
-        public ICommand SchemaSelectCommand => new RelayCommand(SchemaSelectCommandExecute, SchemaSelectCommandCanExecute);
+        public ICommand SchFileSelectCommand => new RelayCommand(SchFileSelectCommandExecute, SchFileSelectCommandCanExecute);
+        public ICommand XmlFilesSelectCommand => new RelayCommand(XmlFilesSelectCommandExecute, XmlFilesSelectCommandCanExecute);
         public ICommand ValidationCommand => new RelayCommand(ValidationCommandExecute, ValidationCommandCanExecute);
+        public ICommand ReportViewCommand => new RelayCommand<object>(ReportViewCommandExecute, ReportViewCommandCanExecute);
         #region Command Executions
-        bool SchemaSelectCommandCanExecute() => true;
-        void SchemaSelectCommandExecute()
+        bool SchFileSelectCommandCanExecute() => !Progress.DoProgress;
+        void SchFileSelectCommandExecute()
         {
-            string path = ExDialogs.SelectionFile("choose schema file(*.sch)", new[] { ".sch" });
-            if (File.Exists(path))
+            string file = ExDialogs.SelectionFile("choose schema file(*.sch)", new[] { ".sch" });
+            if (File.Exists(file))
             {
-                SchemaFile = new SchResourceModel(path);
+                SchemaFile = new SchResourceModel(file);
             }
         }
-        bool ValidationCommandCanExecute() => true;
+        bool XmlFilesSelectCommandCanExecute() => !Progress.DoProgress;
+        void XmlFilesSelectCommandExecute()
+        {
+            string[] files = ExDialogs.SelectionFiles("choose xml file(*.xml)", new[] { ".xml" });
+            foreach (string file in files)
+            {
+                if (File.Exists(file) && !XmlFiles.Exists(file))
+                {
+                    XmlFiles.Add(file);
+                }
+            }
+        }
+        bool ValidationCommandCanExecute() => SchemaFile != null && XmlFiles.Count > 0;
         async void ValidationCommandExecute()
         {
             if (!Progress.DoProgress)
@@ -100,6 +122,15 @@ namespace Schematron.Validator.Mvvm.ViewModels
                 {
                     Progress.Cancel();
                 }
+            }
+        }
+        bool ReportViewCommandCanExecute(object param) => true;
+        void ReportViewCommandExecute(object param)
+        {
+            XmlResourceModel model = param as XmlResourceModel;
+            if(model != null)
+            {
+                Debug.Print("ReportViewCommandExecute: {0}", model.Name);
             }
         }
         #endregion

@@ -52,7 +52,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Class2.cs" />
     <Compile Include="ClassTest.cs" />
     <Compile Include="Mvvm\Models\ProgressModelTests.cs" />
     <Compile Include="Mvvm\Models\ResourceModelTests.cs" />

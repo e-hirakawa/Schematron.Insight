@@ -25,7 +25,9 @@
                 <Button Content="{Binding Progress.Button.Caption, Mode=OneWay}" 
                         Command="{Binding ValidationCommand}" />
                 <Button Content="select sch" 
-                        Command="{Binding SchemaSelectCommand}" />
+                        Command="{Binding SchFileSelectCommand}" />
+                <Button Content="select xml(s)" 
+                        Command="{Binding XmlFilesSelectCommand}" />
             </StackPanel>
         </Grid>
         <StackPanel Grid.Row="1">
@@ -46,7 +48,7 @@
                 </ListView>
             </ScrollViewer>
             <ScrollViewer>
-                <ListView ItemsSource="{Binding XmlFiles}">
+                <ListView ItemsSource="{Binding XmlFiles}" SelectedItem="{Binding SelectedXmlFile}">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
@@ -54,6 +56,10 @@
                                 <TextBlock Text="{Binding DisplaySize}" />
                                 <TextBlock Text="{Binding DisplayModifiedDate}" />
                                 <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="HighQuality" Width="36" Height="36"  />
+                                <Button 
+                                    Content="view" 
+                                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ReportViewCommand}"
+                                    CommandParameter="{Binding}"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
