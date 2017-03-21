@@ -444,6 +444,7 @@ namespace Schematron.Insight
                     Message = ex.Message
                 });
             }
+            results.TrimExcess();
             return results;
         }
 

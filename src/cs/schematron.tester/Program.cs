@@ -1,6 +1,8 @@
 ﻿using Schematron.Insight;
 using Schematron.Insight.Utilities;
 using Schematron.Insight.Validation;
+using Schematron.Insight.Validation.Report;
+using Schematron.Insight.Validation.Report.Strategies;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -70,17 +72,11 @@ namespace schematron.tester.cui
                 {
                     Reporter report = new Reporter();
                     report.Results = results;
+                    IReportStrategy strategy = EmbeddReportStrategies.Find(arginfo.OutFormat);
+                    if (strategy == null)
+                        strategy = new ReportDefaultStrategy();
 
-                    switch (arginfo.OutFormat.ToLower())
-                    {
-                        case "log": report.Format = Schematron.Insight.ExportFormats.Log; break;
-                        case "tab": report.Format = Schematron.Insight.ExportFormats.Tab; break;
-                        case "xml": report.Format = Schematron.Insight.ExportFormats.Xml; break;
-                        case "json": report.Format = Schematron.Insight.ExportFormats.Json; break;
-                        case "html": report.Format = Schematron.Insight.ExportFormats.Html; break;
-                    }
-
-                    report.Write(arginfo.OutFile.FullName);
+                    report.Write(arginfo.OutFile.FullName, strategy);
                 }
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("");

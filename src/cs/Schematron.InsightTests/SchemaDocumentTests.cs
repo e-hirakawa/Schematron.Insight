@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Schematron.Insight.Validation;
+using Schematron.Insight.Validation.Report;
+using Schematron.Insight.Validation.Report.Strategies;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -53,10 +54,8 @@ namespace Schematron.Insight.Tests
 
                     report.Results = doc.Validation(testxml);
 
-
-                    report.Format = ExportFormats.Json;
 #if true
-                    report.Write(dstfile);
+                    report.Write(dstfile, new ReportJsonStrategy());
 #else
                     // test result
                     string result = report.ToString(ExportFormats.Html);
@@ -126,9 +125,8 @@ namespace Schematron.Insight.Tests
                     string dstfile = Path.Combine(dir, $"{test}-result.json");
                     if (!File.Exists(dstfile))
                         throw new FileNotFoundException();
-
-                    report.Format = ExportFormats.Json;
-                    report.Read(dstfile);
+                    
+                    report.Read(dstfile, new ReportJsonStrategy());
 
                     Debug.Print("");
 

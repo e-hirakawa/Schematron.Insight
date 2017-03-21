@@ -4,6 +4,8 @@
 *.jar
 *.war
 *.ear
+# Installer
+*.iss
 
 # Eclipse
 .project

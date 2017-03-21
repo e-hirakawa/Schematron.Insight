@@ -64,6 +64,7 @@ namespace Schematron.Insight.Validation
         public bool Remove(Result result) => _items.Remove(result);
         public void RemoveAt(int index) => _items.RemoveAt(index);
         public void Clear() => _items.Clear();
+        public void TrimExcess() => _items.TrimExcess();
         #endregion
 
         #region IEnumerable

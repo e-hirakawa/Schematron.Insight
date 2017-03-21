@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Schematron.Insight.Validation.Report.Strategies;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -127,8 +128,8 @@ namespace schematron.tester.cui
             Name = "レポート形式",
             IsRequired = false,
             IsOmitValue = false,
-            TrustOfValues = new string[] { "log", "tab", "xml", "json", "html" },
-            Description = "形式一覧：log|tab|xml|json|html. 初期値:html."
+            TrustOfValues =  EmbeddReportStrategies.GetNames(),
+            Description = $"形式一覧：{String.Join("|", EmbeddReportStrategies.GetNames())}. 初期値:{new ReportDefaultStrategy().Name}."
         };
         private ArgumentItem _Phase = new ArgumentItem()
         {

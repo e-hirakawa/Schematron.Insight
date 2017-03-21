@@ -54,6 +54,7 @@
     <Compile Include="SchemaDocumentTests.cs" />
     <Compile Include="Utilities\EnumerationTypeHelperTests.cs" />
     <Compile Include="UtilityTest.cs" />
+    <Compile Include="Validation\Report\Strategies\EmbeddReportStrategiesTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Schematron.Insight\Schematron.Insight.csproj">
