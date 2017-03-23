@@ -10,7 +10,7 @@ namespace Schematron.Validator.Utilities.Actions
         static Type type_self = typeof(FileDropBehavior);
 
         public static readonly DependencyProperty CommandProperty =
-            DependencyProperty.Register("Command", type_cmnd, type_self, new PropertyMetadata(null, PropertyChangedCallback));
+            DependencyProperty.RegisterAttached("Command", type_cmnd, type_self, new PropertyMetadata(null, PropertyChangedCallback));
 
         public static ICommand GetCommand(DependencyObject obj) => (ICommand)obj?.GetValue(CommandProperty);
         public static void SetCommand(DependencyObject obj, ICommand value) => obj?.SetValue(CommandProperty, value);
@@ -39,12 +39,6 @@ namespace Schematron.Validator.Utilities.Actions
 
         private static void Element_Drop(object sender, DragEventArgs e)
         {
-            e.Effects = (e.Data.GetData(DataFormats.FileDrop) != null) ? DragDropEffects.Copy : DragDropEffects.None;
-            e.Handled = true;
-        }
-
-        private static void Element_PreviewDragOver(object sender, DragEventArgs e)
-        {
             var element = sender as UIElement;
             if (element != null)
             {
@@ -55,6 +49,12 @@ namespace Schematron.Validator.Utilities.Actions
                     cmd.Execute(fileInfos);
                 }
             }
+        }
+
+        private static void Element_PreviewDragOver(object sender, DragEventArgs e)
+        {
+            e.Effects = (e.Data.GetData(DataFormats.FileDrop) != null) ? DragDropEffects.Copy : DragDropEffects.None;
+            e.Handled = true;
         }
     }
 }

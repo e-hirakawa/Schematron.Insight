@@ -15,7 +15,7 @@ namespace Schematron.Validator.Mvvm.Models.Tests
         [TestMethod()]
         public void ResourceModelTest()
         {
-            ResourceModel model = new ResourceModel();
+            DocumentModel model = new DocumentModel();
             model.FullPath = @"C:\Users\ehirakawa\Documents\pv.develop\schematron\Schematron.Insight\src\cs\Schematron.ValidatorTests\Mvvm\Models\ResourceModelTests.cs";
             model.FullPath = @"go*e\dafa.cc";
             model.FullPath = null;

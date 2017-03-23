@@ -16,9 +16,17 @@ namespace Schematron.Validator.Mvvm.ViewModels
     {
         #region Private Properties
         private ProgressModel _progress;
-        private SchResourceModel _schemaFile;
-        private XmlResourceCollection _xmlFiles = new XmlResourceCollection();
-        private XmlResourceModel _selectedXmlFile;
+        private DocumentSchemaModel _schema;
+        private DocumentXmlCollection _xmls = new DocumentXmlCollection();
+        private DocumentXmlModel _selectedXml;
+
+        private DocumentStatus _status = DocumentStatus.None;
+
+        public DocumentStatus Status
+        {
+            get { return _status; }
+            set { Set(() => Status, ref _status, value); }
+        }
 
 
 
@@ -38,81 +46,102 @@ namespace Schematron.Validator.Mvvm.ViewModels
             }
         }
 
-        public SchResourceModel SchemaFile
+        public DocumentSchemaModel Schema
         {
-            get { return _schemaFile; }
+            get { return _schema; }
             set
             {
-                if (_schemaFile != value)
+                if (_schema != value)
                 {
-                    Set(() => SchemaFile, ref _schemaFile, value);
+                    Set(() => Schema, ref _schema, value);
                 }
             }
         }
-        public XmlResourceCollection XmlFiles
+        public DocumentXmlCollection Xmls
         {
-            get { return _xmlFiles; }
+            get { return _xmls; }
             set
             {
-                if (_xmlFiles != value)
+                if (_xmls != value)
                 {
-                    Set(() => XmlFiles, ref _xmlFiles, value);
+                    Set(() => Xmls, ref _xmls, value);
                 }
             }
         }
-        public XmlResourceModel SelectedXmlFile
+        public DocumentXmlModel SelectedXmlFile
         {
-            get { return _selectedXmlFile; }
+            get { return _selectedXml; }
             set {
-                Set(() => SelectedXmlFile, ref _selectedXmlFile, value);
+                Set(() => SelectedXmlFile, ref _selectedXml, value);
             }
         }
         #endregion
         #region Constructors
         public MainViewModel(string[] args)
         {
-            BindingOperations.EnableCollectionSynchronization(XmlFiles, new object());
+            BindingOperations.EnableCollectionSynchronization(Xmls, new object());
             Progress = new ProgressModel();
-            Progress.Button.ExecutorCaption = "Validation";
-            Progress.Button.CancellerCaption = "Cancel";
 
         }
         public MainViewModel() : this(new string[] { }) { }
         #endregion
         #region Command Declare
-        /// <summary>
-        /// Choose Schematron File
-        /// </summary>
-        public ICommand SchFileSelectCommand => new RelayCommand(SchFileSelectCommandExecute, SchFileSelectCommandCanExecute);
-        public ICommand XmlFilesSelectCommand => new RelayCommand(XmlFilesSelectCommandExecute, XmlFilesSelectCommandCanExecute);
+        public ICommand FileDropCommand => new RelayCommand<object>(FileDropCommandExecute, FileDropCommandCanExecute);
+        public ICommand SchemaSelectCommand => new RelayCommand(SchemaSelectCommandExecute, SchemaSelectCommandCanExecute);
+        public ICommand XmlSelectCommand => new RelayCommand(XmlSelectCommandExecute, XmlSelectCommandCanExecute);
         public ICommand ValidationCommand => new RelayCommand(ValidationCommandExecute, ValidationCommandCanExecute);
+        public ICommand SettingsCommand => new RelayCommand(SettingsCommandExecute, SettingsCommandCanExecute);
+        public ICommand HelpCommand => new RelayCommand(HelpCommandExecute, HelpCommandCanExecute);
         public ICommand ReportViewCommand => new RelayCommand<object>(ReportViewCommandExecute, ReportViewCommandCanExecute);
+
         #region Command Executions
-        bool SchFileSelectCommandCanExecute() => !Progress.DoProgress;
-        void SchFileSelectCommandExecute()
+        bool FileDropCommandCanExecute(object param) => !Progress.IsProgress;
+        void FileDropCommandExecute(object param)
         {
-            string file = ExDialogs.SelectionFile("choose schema file(*.sch)", new[] { ".sch" });
-            if (File.Exists(file))
+            string[] files = param as string[];
+            if(files != null)
             {
-                SchemaFile = new SchResourceModel(file);
-            }
-        }
-        bool XmlFilesSelectCommandCanExecute() => !Progress.DoProgress;
-        void XmlFilesSelectCommandExecute()
-        {
-            string[] files = ExDialogs.SelectionFiles("choose xml file(*.xml)", new[] { ".xml" });
-            foreach (string file in files)
-            {
-                if (File.Exists(file) && !XmlFiles.Exists(file))
+                foreach(string file in files)
                 {
-                    XmlFiles.Add(file);
+                    if (!File.Exists(file))
+                        continue;
+                    string ext = Path.GetExtension(file).ToLower();
+                    if (ext == ".sch")
+                    {
+                        Schema = new DocumentSchemaModel(file);
+                    }
+                    else if (ext == ".xml" && !Xmls.Exists(file))
+                    {
+                        Xmls.Add(file);
+                    }
                 }
             }
         }
-        bool ValidationCommandCanExecute() => SchemaFile != null && XmlFiles.Count > 0;
+        bool SchemaSelectCommandCanExecute() => !Progress.IsProgress;
+        void SchemaSelectCommandExecute()
+        {
+            string file = ExDialogs.SelectionFile(Properties.Resources.ToolItemButtonChooseSch, new[] { ".sch" });
+            if (File.Exists(file))
+            {
+                Schema = new DocumentSchemaModel(file);
+            }
+        }
+        bool XmlSelectCommandCanExecute() => !Progress.IsProgress;
+        void XmlSelectCommandExecute()
+        {
+            string[] files = ExDialogs.SelectionFiles(Properties.Resources.ToolItemButtonChooseXml, new[] { ".xml" });
+            foreach (string file in files)
+            {
+                if (File.Exists(file) && !Xmls.Exists(file))
+                {
+                    Xmls.Add(file);
+                }
+            }
+        }
+        bool ValidationCommandCanExecute() => Schema != null && Xmls.Count > 0;
         async void ValidationCommandExecute()
         {
-            if (!Progress.DoProgress)
+            if (!Progress.IsProgress)
             {
                 await Task.Run(() => DoValidation());
             }
@@ -124,10 +153,20 @@ namespace Schematron.Validator.Mvvm.ViewModels
                 }
             }
         }
+        bool SettingsCommandCanExecute() => !Progress.IsProgress;
+        void SettingsCommandExecute()
+        {
+
+        }
+        bool HelpCommandCanExecute() => true;
+        void HelpCommandExecute()
+        {
+
+        }
         bool ReportViewCommandCanExecute(object param) => true;
         void ReportViewCommandExecute(object param)
         {
-            XmlResourceModel model = param as XmlResourceModel;
+            DocumentXmlModel model = param as DocumentXmlModel;
             if(model != null)
             {
                 Debug.Print("ReportViewCommandExecute: {0}", model.Name);

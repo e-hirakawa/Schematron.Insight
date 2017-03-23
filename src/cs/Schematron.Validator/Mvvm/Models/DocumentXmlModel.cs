@@ -2,7 +2,7 @@
 
 namespace Schematron.Validator.Mvvm.Models
 {
-    public class XmlResourceModel : ResourceModel
+    public class DocumentXmlModel : DocumentModel
     {
         #region Private Properties
         private ResultStatus _resultStatus = ResultStatus.None;
@@ -19,8 +19,8 @@ namespace Schematron.Validator.Mvvm.Models
         }
         #endregion
         #region Constructor
-        public XmlResourceModel(string path): base(path) { }
-        public XmlResourceModel() : this(null) { }
+        public DocumentXmlModel(string path): base(path) { }
+        public DocumentXmlModel() : this(null) { }
         #endregion
     }
 }

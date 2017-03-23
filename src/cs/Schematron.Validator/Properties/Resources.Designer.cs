@@ -4,67 +4,239 @@
 //     ランタイム バージョン:4.0.30319.42000
 //
 //     このファイルへの変更は、以下の状況下で不正な動作の原因になったり、
-//     コードが再生成されるときに損失したりします
+//     コードが再生成されるときに損失したりします。
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Schematron.Validator.Properties
-{
-
-
+namespace Schematron.Validator.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   ローカライズされた文字列などを検索するための、厳密に型指定されたリソース クラスです。
     /// </summary>
-    // このクラスは StronglyTypedResourceBuilder クラスによって ResGen
+    // このクラスは StronglyTypedResourceBuilder クラスが ResGen
     // または Visual Studio のようなツールを使用して自動生成されました。
     // メンバーを追加または削除するには、.ResX ファイルを編集して、/str オプションと共に
-    // ResGen を実行し直すか、または VS プロジェクトをリビルドします。
+    // ResGen を実行し直すか、または VS プロジェクトをビルドし直します。
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    public class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
-        ///   このクラスで使用されるキャッシュされた ResourceManager インスタンスを返します。
+        ///   このクラスで使用されているキャッシュされた ResourceManager インスタンスを返します。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        public static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Schematron.Validator.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   厳密に型指定されたこのリソース クラスを使用して、すべての検索リソースに対し、
         ///   現在のスレッドの CurrentUICulture プロパティをオーバーライドします。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        public static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   loaded correctly に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DocumentStatusLoadedCorrectly {
+            get {
+                return ResourceManager.GetString("DocumentStatusLoadedCorrectly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   failure to load に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DocumentStatusLoadedFailure {
+            get {
+                return ResourceManager.GetString("DocumentStatusLoadedFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   loading... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DocumentStatusLoading {
+            get {
+                return ResourceManager.GetString("DocumentStatusLoading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   -- に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DocumentStatusNone {
+            get {
+                return ResourceManager.GetString("DocumentStatusNone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   has report に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DocumentStatusValidatedHasInfo {
+            get {
+                return ResourceManager.GetString("DocumentStatusValidatedHasInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   no report に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DocumentStatusValidatedNoInfo {
+            get {
+                return ResourceManager.GetString("DocumentStatusValidatedNoInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   validating... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string DocumentStatusValidating {
+            get {
+                return ResourceManager.GetString("DocumentStatusValidating", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Schema File Information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string GroupBoxHeaderSch {
+            get {
+                return ResourceManager.GetString("GroupBoxHeaderSch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Xml File(s) Information に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string GroupBoxHeaderXml {
+            get {
+                return ResourceManager.GetString("GroupBoxHeaderXml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Modified に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LabelSchDate {
+            get {
+                return ResourceManager.GetString("LabelSchDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Name に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LabelSchName {
+            get {
+                return ResourceManager.GetString("LabelSchName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Validation Phase に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LabelSchPhase {
+            get {
+                return ResourceManager.GetString("LabelSchPhase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Size に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LabelSchSize {
+            get {
+                return ResourceManager.GetString("LabelSchSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Status に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string LabelSchStatus {
+            get {
+                return ResourceManager.GetString("LabelSchStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Cancel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ToolItemButtonCancel {
+            get {
+                return ResourceManager.GetString("ToolItemButtonCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open Schema(*.sch) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ToolItemButtonChooseSch {
+            get {
+                return ResourceManager.GetString("ToolItemButtonChooseSch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Open Xml(*.xml) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ToolItemButtonChooseXml {
+            get {
+                return ResourceManager.GetString("ToolItemButtonChooseXml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Help に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ToolItemButtonHelp {
+            get {
+                return ResourceManager.GetString("ToolItemButtonHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Settings に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ToolItemButtonSettings {
+            get {
+                return ResourceManager.GetString("ToolItemButtonSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Check に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ToolItemButtonValidation {
+            get {
+                return ResourceManager.GetString("ToolItemButtonValidation", resourceCulture);
             }
         }
     }

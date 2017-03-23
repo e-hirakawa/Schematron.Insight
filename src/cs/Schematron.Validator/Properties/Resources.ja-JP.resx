@@ -118,63 +118,63 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DocumentStatusLoadedCorrectly" xml:space="preserve">
-    <value>loaded correctly</value>
+    <value>読込成功</value>
   </data>
   <data name="DocumentStatusLoadedFailure" xml:space="preserve">
-    <value>failure to load</value>
+    <value>読込失敗</value>
   </data>
   <data name="DocumentStatusLoading" xml:space="preserve">
-    <value>loading...</value>
+    <value>読込中...</value>
   </data>
   <data name="DocumentStatusNone" xml:space="preserve">
     <value>--</value>
   </data>
   <data name="DocumentStatusValidatedHasInfo" xml:space="preserve">
-    <value>has report</value>
+    <value>レポートあり</value>
   </data>
   <data name="DocumentStatusValidatedNoInfo" xml:space="preserve">
-    <value>no report</value>
+    <value>レポートなし</value>
   </data>
   <data name="DocumentStatusValidating" xml:space="preserve">
-    <value>validating...</value>
+    <value>検証中...</value>
   </data>
   <data name="GroupBoxHeaderSch" xml:space="preserve">
-    <value>Schema File Information</value>
+    <value>スキーマファイル情報</value>
   </data>
   <data name="GroupBoxHeaderXml" xml:space="preserve">
-    <value>Xml File(s) Information</value>
+    <value>Xmlファイル情報</value>
   </data>
   <data name="LabelSchDate" xml:space="preserve">
-    <value>Modified</value>
+    <value>更新日時</value>
   </data>
   <data name="LabelSchName" xml:space="preserve">
-    <value>Name</value>
+    <value>ファイル名</value>
   </data>
   <data name="LabelSchPhase" xml:space="preserve">
-    <value>Validation Phase</value>
+    <value>検証フェーズ</value>
   </data>
   <data name="LabelSchSize" xml:space="preserve">
-    <value>Size</value>
+    <value>サイズ</value>
   </data>
   <data name="LabelSchStatus" xml:space="preserve">
-    <value>Status</value>
+    <value>ステータス</value>
   </data>
   <data name="ToolItemButtonCancel" xml:space="preserve">
-    <value>Cancel</value>
+    <value>キャンセル</value>
   </data>
   <data name="ToolItemButtonChooseSch" xml:space="preserve">
-    <value>Open Schema(*.sch)</value>
+    <value>スキーマを開く(*.sch)</value>
   </data>
   <data name="ToolItemButtonChooseXml" xml:space="preserve">
-    <value>Open Xml(*.xml)</value>
+    <value>XMLを開く(*.xml)</value>
   </data>
   <data name="ToolItemButtonHelp" xml:space="preserve">
-    <value>Help</value>
+    <value>ヘルプ</value>
   </data>
   <data name="ToolItemButtonSettings" xml:space="preserve">
-    <value>Settings</value>
+    <value>設定</value>
   </data>
   <data name="ToolItemButtonValidation" xml:space="preserve">
-    <value>Check</value>
+    <value>検証</value>
   </data>
 </root>

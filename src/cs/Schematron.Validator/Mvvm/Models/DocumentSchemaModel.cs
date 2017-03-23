@@ -9,16 +9,12 @@ using System.Threading.Tasks;
 
 namespace Schematron.Validator.Mvvm.Models
 {
-    public class SchResourceModel : ResourceModel
+    public class DocumentSchemaModel : DocumentModel
     {
         #region Private Properties
         private SchemaDocument _doc = null;
         private Phase _selectedPhase;
         private ObservableCollection<Phase> _phases;
-        private bool _isValid = false;
-
-
-
 
         #endregion
         #region Public Properties
@@ -41,19 +37,10 @@ namespace Schematron.Validator.Mvvm.Models
                     Set(() => Phases, ref _phases, value);
             }
         }
-        public bool IsValid
-        {
-            get { return _isValid; }
-            private set
-            {
-                if (_isValid != value)
-                    Set(() => IsValid, ref _isValid, value);
-            }
-        }
         #endregion
         #region Constructor
 
-        public SchResourceModel(string filepath) : base(filepath)
+        public DocumentSchemaModel(string filepath) : base(filepath)
         {
         }
         #endregion
@@ -65,23 +52,34 @@ namespace Schematron.Validator.Mvvm.Models
         protected override void UpdateProperties(string filepath)
         {
             base.UpdateProperties(filepath);
-            if (File.Exists(filepath))
+            Loading();
+        }
+        private async void Loading()
+        {
+            if (File.Exists(FullPath))
             {
                 if (_doc != null)
                     Close();
-                try
-                {
-                    _doc = new SchemaDocument();
-                    _doc.Open(filepath);
-                    Phases = new ObservableCollection<Phase>(_doc.Phases);
-                    Phases.Insert(0, new Phase() { Id = "ALL" });
 
-                    IsValid = true;
-                }
-                catch (Exception ex)
+                await Task.Run(() =>
                 {
-                    throw ex;
-                }
+                    Status = DocumentStatus.Loading;
+                    System.Threading.Thread.Sleep(5 * 1000);
+                    try
+                    {
+                        _doc = new SchemaDocument();
+                        _doc.Open(FullPath);
+                        Phases = new ObservableCollection<Phase>(_doc.Phases);
+                        Phases.Insert(0, new Phase() { Id = "ALL" });
+
+                        Status = DocumentStatus.LoadedCorrectly;
+                    }
+                    catch (Exception ex)
+                    {
+                        Status = DocumentStatus.LoadedFailure;
+                        Message = ex.Message;
+                    }
+                });
             }
         }
         public override void Dispose()
@@ -96,7 +94,6 @@ namespace Schematron.Validator.Mvvm.Models
             Phases.Clear();
             _doc?.Dispose();
             _doc = null;
-            IsValid = false;
         }
         #endregion
     }

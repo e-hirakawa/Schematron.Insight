@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Schematron.Validator.Mvvm.Models
+namespace Schematron.Validator.Resources
 {
-    class MainModel
+    class Resource
     {
     }
 }

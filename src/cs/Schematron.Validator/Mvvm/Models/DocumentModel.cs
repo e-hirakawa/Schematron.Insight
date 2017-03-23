@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 
 namespace Schematron.Validator.Mvvm.Models
 {
-    public class ResourceModel : ViewModelBase, IDisposable
+    public class DocumentModel : ViewModelBase, IDisposable
     {
         #region Private Properties
         private string _id;
@@ -26,6 +26,10 @@ namespace Schematron.Validator.Mvvm.Models
         private DateTime? _modified;
         private string _dispdate;
         private ImageSource _icon;
+        private DocumentStatus _status = DocumentStatus.None;
+        private string _message;
+
+
 
         #endregion
         #region Public Properties
@@ -141,13 +145,37 @@ namespace Schematron.Validator.Mvvm.Models
                     Set(() => Icon, ref _icon, value);
             }
         }
+        /// <summary>
+        /// Document Status
+        /// </summary>
+        public DocumentStatus Status
+        {
+            get { return _status; }
+            set
+            {
+                if (_status != value)
+                    Set(() => Status, ref _status, value);
+            }
+        }
+        /// <summary>
+        /// Status Message
+        /// </summary>
+        public string Message
+        {
+            get { return _message; }
+            set
+            {
+                if (_message != value)
+                    Set(() => Message, ref _message, value);
+            }
+        }
         #endregion
         #region Constructors
         /// <summary>
         /// ResourceModel Constructor
         /// </summary>
         /// <param name="filepath">Resource File Path</param>
-        public ResourceModel(string filepath)
+        public DocumentModel(string filepath)
         {
             Id = Guid.NewGuid().ToString("N");
             FullPath = filepath;
@@ -155,7 +183,7 @@ namespace Schematron.Validator.Mvvm.Models
         /// <summary>
         /// ResourceModel Constructor
         /// </summary>
-        public ResourceModel() : this(null) { }
+        public DocumentModel() : this(null) { }
         #endregion
         #region Methods
         /// <summary>
@@ -175,8 +203,9 @@ namespace Schematron.Validator.Mvvm.Models
             ModifiedDate = fi?.LastWriteTime;
             DisplayModifiedDate = ToDisplayDate(ModifiedDate);
             Icon = CreateBitmapIcon(fi.FullName);
+            Status = DocumentStatus.None;
+            Message = "";
         }
-
         private static string ToDisplaySize(double size)
         {
             int block = 1024;

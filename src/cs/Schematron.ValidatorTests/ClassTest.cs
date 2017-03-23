@@ -14,9 +14,7 @@ namespace Schematron.ValidatorTests
         public void Test()
         {
             Class1 c11 = new Class1();
-            Class2 c22 = new Class2();
             c11.Update();
-            c22.Update();
         }
     }
 }

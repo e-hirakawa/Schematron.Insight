@@ -6,67 +6,150 @@
         xmlns:local="clr-namespace:Schematron.Validator.Mvvm.Views"
         xmlns:vm="clr-namespace:Schematron.Validator.Mvvm.ViewModels"
         xmlns:conv="clr-namespace:Schematron.Validator.Utilities.Converter"
+        xmlns:act="clr-namespace:Schematron.Validator.Utilities.Actions"
+        xmlns:ctrl="clr-namespace:Schematron.Validator.Utilities.Controls"
+        xmlns:properties="clr-namespace:Schematron.Validator.Properties"
         mc:Ignorable="d"
-        Title="{Binding Title, Mode=OneTime}" Height="300" Width="300">
+        AllowDrop="True"
+        Title="{Binding Title, Mode=OneTime}" Height="416" Width="617">
     <Window.DataContext>
         <vm:MainViewModel />
     </Window.DataContext>
     <Window.Resources>
         <conv:BoolToVisibilityConverter x:Key="BoolToVisible" />
+        <conv:DocumentStatusToString x:Key="DocumentStatusToString" />
     </Window.Resources>
-    <Grid>
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Ctrl" Key="O" Command="{Binding SchemaSelectCommand}" />
+        <KeyBinding Modifiers="Ctrl+Shift" Key="O" Command="{Binding XmlSelectCommand}" />
+        <KeyBinding Modifiers="" Key="F5" Command="{Binding ValidationCommand}" />
+        <KeyBinding Modifiers="" Key="F1" Command="{Binding HelpCommand}" />
+    </Window.InputBindings>
+    <Grid act:FileDropBehavior.Command="{Binding FileDropCommand}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        <!--Toolbar-->
         <Grid Grid.Row="0">
-            <StackPanel>
-                <Button Content="{Binding Progress.Button.Caption, Mode=OneWay}" 
-                        Command="{Binding ValidationCommand}" />
-                <Button Content="select sch" 
-                        Command="{Binding SchFileSelectCommand}" />
-                <Button Content="select xml(s)" 
-                        Command="{Binding XmlFilesSelectCommand}" />
-            </StackPanel>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <!--Open Schema File Button-->
+            <ctrl:ToolItemButton Grid.Column="0" ToolTip="Ctrl+O"
+                                 Style="{StaticResource ToolItemButtonStyle}"
+                                 ImageSource="/Schematron.Validator;component/Resources/XMLSchema_798_32x.png"
+                                 Content="{x:Static properties:Resources.ToolItemButtonChooseSch}" 
+                                 Command="{Binding SchemaSelectCommand}" />
+            <Separator Grid.Column="1" Style="{StaticResource ToolItemSeparator}" />
+            <!--Open Xml File(s) Button-->
+            <ctrl:ToolItemButton Grid.Column="2" ToolTip="Ctrl+Shift+O"
+                                 Style="{StaticResource ToolItemButtonStyle}"
+                                 ImageSource="/Schematron.Validator;component/Resources/XMLFile_828_32x.png"
+                                 Content="{x:Static properties:Resources.ToolItemButtonChooseXml}" 
+                                 Command="{Binding XmlSelectCommand}" />
+            <Separator Grid.Column="3" Style="{StaticResource ToolItemSeparator}" />
+            <!--Validation Button-->
+            <ctrl:ToolItemButton Grid.Column="4" ToolTip="F5"
+                Command="{Binding ValidationCommand}">
+                <ctrl:ToolItemButton.Style>
+                    <Style TargetType="ctrl:ToolItemButton" BasedOn="{StaticResource ToolItemButtonStyle}">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Progress.IsProgress, Mode=OneWay}" Value="True">
+                                <Setter Property="Content" Value="{x:Static properties:Resources.ToolItemButtonCancel}" />
+                                <Setter Property="ImageSource" Value="/Schematron.Validator;component/Resources/stop.png" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Progress.IsProgress, Mode=OneWay}" Value="False">
+                                <Setter Property="Content" Value="{x:Static properties:Resources.ToolItemButtonValidation}" />
+                                <Setter Property="ImageSource" Value="/Schematron.Validator;component/Resources/test_32x_LG.png" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ctrl:ToolItemButton.Style>
+            </ctrl:ToolItemButton>
+            <Separator Grid.Column="5" Style="{StaticResource ToolItemSeparator}" />
+            <Separator Grid.Column="7" Style="{StaticResource ToolItemSeparator}" />
+            <!--Settings Button-->
+            <ctrl:ToolItemButton Grid.Column="8"
+                                 Style="{StaticResource ToolItemButtonStyle}"
+                                 ImageSource="/Schematron.Validator;component/Resources/settings.png"
+                                 Content="{x:Static properties:Resources.ToolItemButtonSettings}" 
+                                 Command="{Binding SettingsCommand}" />
+            <Separator Grid.Column="9" Style="{StaticResource ToolItemSeparator}" />
+            <!--Information Button-->
+            <ctrl:ToolItemButton Grid.Column="10" ToolTip="F1"
+                                 Style="{StaticResource ToolItemButtonStyle}"
+                                 ImageSource="/Schematron.Validator;component/Resources/Information(Help)_7833.png"
+                                 Content="{x:Static properties:Resources.ToolItemButtonHelp}" 
+                                 Command="{Binding HelpCommand}" />
         </Grid>
-        <StackPanel Grid.Row="1">
-            <Label>sch</Label>
-            <TextBlock Text="{Binding SchemaFile.Name}" />
-            <TextBlock Text="{Binding SchemaFile.DisplaySize}" />
-            <TextBlock Text="{Binding SchemaFile.DisplayModifiedDate}" />
-            <Image Source="{Binding SchemaFile.Icon}" RenderOptions.BitmapScalingMode="HighQuality" Width="36" Height="36"  />
-            <ScrollViewer>
-                <ListView ItemsSource="{Binding SchemaFile.Phases}" SelectedItem="{Binding SchemaFile.SelectedPhase}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Id}" />
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </ScrollViewer>
-            <ScrollViewer>
-                <ListView ItemsSource="{Binding XmlFiles}" SelectedItem="{Binding SelectedXmlFile}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Name}" />
-                                <TextBlock Text="{Binding DisplaySize}" />
-                                <TextBlock Text="{Binding DisplayModifiedDate}" />
-                                <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="HighQuality" Width="36" Height="36"  />
-                                <Button 
+        <!--Schema File Information-->
+        <GroupBox Grid.Row="1"
+                  Header="{x:Static properties:Resources.GroupBoxHeaderSch}"
+                  Style="{StaticResource GroupBoxStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="{x:Static properties:Resources.LabelSchName}" />
+                <Label Grid.Row="1" Grid.Column="0" Content="{x:Static properties:Resources.LabelSchSize}" />
+                <Label Grid.Row="2" Grid.Column="0" Content="{x:Static properties:Resources.LabelSchDate}" />
+                <Label Grid.Row="3" Grid.Column="0" Content="{x:Static properties:Resources.LabelSchPhase}" />
+                <Label Grid.Row="4" Grid.Column="0" Content="{x:Static properties:Resources.LabelSchStatus}" />
+                <Label Grid.Row="0" Grid.Column="1" Content="{Binding Schema.Name}" />
+                <Label Grid.Row="1" Grid.Column="1" Content="{Binding Schema.DisplaySize}" />
+                <Label Grid.Row="2" Grid.Column="1" Content="{Binding Schema.DisplayModifiedDate}" />
+                <ComboBox Grid.Row="3" Grid.Column="1"
+                          ItemsSource="{Binding Schema.Phases}"
+                          SelectedItem="{Binding Schema.SelectedPhase}" DisplayMemberPath="Id" />
+                <Label Grid.Row="4" Grid.Column="1" Content="{Binding Schema.Status, Mode=OneWay, Converter={StaticResource DocumentStatusToString}}" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="2"
+                  Header="{x:Static properties:Resources.GroupBoxHeaderXml}"
+                  Style="{StaticResource GroupBoxStyle}">
+            <StackPanel>
+                <ScrollViewer>
+                    <ListView ItemsSource="{Binding Xmls}" SelectedItem="{Binding SelectedXmlFile}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}" />
+                                    <TextBlock Text="{Binding DisplaySize}" />
+                                    <TextBlock Text="{Binding DisplayModifiedDate}" />
+                                    <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="HighQuality" Width="36" Height="36"  />
+                                    <Button 
                                     Content="view" 
                                     Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ReportViewCommand}"
                                     CommandParameter="{Binding}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </ScrollViewer>
-        </StackPanel>
-        <Grid Grid.Row="2">
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </ScrollViewer>
+            </StackPanel>
+        </GroupBox>
+        <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="Auto" />

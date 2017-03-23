@@ -3,6 +3,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/presentationframework.AeroLite;component/themes/aerolite.normalcolor.xaml" />
+                <ResourceDictionary Source="/Resources/CommonTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

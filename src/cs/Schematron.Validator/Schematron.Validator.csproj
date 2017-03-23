@@ -74,6 +74,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -103,25 +104,36 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Mvvm\Models\ProgressButtonModel.cs" />
+    <Compile Include="Mvvm\Models\DocumentStatus.cs" />
     <Compile Include="Mvvm\Models\ProgressModel.cs" />
-    <Compile Include="Mvvm\Models\XmlResourceCollection.cs" />
-    <Compile Include="Mvvm\Models\ResourceModel.cs" />
-    <Compile Include="Mvvm\Models\SchResourceModel.cs" />
-    <Compile Include="Mvvm\Models\XmlResourceModel.cs" />
+    <Compile Include="Mvvm\Models\DocumentXmlCollection.cs" />
+    <Compile Include="Mvvm\Models\DocumentModel.cs" />
+    <Compile Include="Mvvm\Models\DocumentSchemaModel.cs" />
+    <Compile Include="Mvvm\Models\DocumentXmlModel.cs" />
+    <Compile Include="Properties\Resources.ja-JP.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.ja-JP.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resource.cs" />
     <Compile Include="Utilities\Actions\FileDropBehavior.cs" />
     <Compile Include="Utilities\ApplicationInfo.cs" />
     <Compile Include="Utilities\Converter\BoolToVisibilityConverter.cs" />
     <Compile Include="Utilities\Converter\EnumBooleanConverter.cs" />
+    <Compile Include="Utilities\Converter\DocumentStatusToString.cs" />
     <Compile Include="Utilities\ExDialogs.cs" />
     <Compile Include="Utilities\ShFileInfo.cs" />
+    <Compile Include="Utilities\Controls\ToolItemButton.cs" />
     <Page Include="Mvvm\Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\CommonTheme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mvvm\Models\MainModel.cs" />
     <Compile Include="Mvvm\ViewModels\MainViewModel.cs" />
     <Compile Include="Mvvm\Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -140,8 +152,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.ja-JP.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.ja-JP.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -158,6 +174,22 @@
       <Project>{44d4508c-50a2-4c50-9222-aa7d9754ef14}</Project>
       <Name>Schematron.Insight</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\test_32x_LG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\XMLFile_828_32x.png" />
+    <Resource Include="Resources\XMLSchema_798_32x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Information%28Help%29_7833.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\settings.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -8,15 +8,15 @@ using System.Windows.Data;
 
 namespace Schematron.Validator.Mvvm.Models
 {
-    public class XmlResourceCollection :ObservableCollection<XmlResourceModel>
+    public class DocumentXmlCollection :ObservableCollection<DocumentXmlModel>
     {
-        public XmlResourceCollection() :base()
+        public DocumentXmlCollection() :base()
         {
             BindingOperations.EnableCollectionSynchronization(this, new object());
         }
         public bool Exists(string path)
         {
-            foreach(ResourceModel model in this)
+            foreach(DocumentModel model in this)
             {
                 if (model.FullPath == path)
                     return true;
@@ -25,7 +25,7 @@ namespace Schematron.Validator.Mvvm.Models
         }
         public void Add(string path)
         {
-            this.Add(new XmlResourceModel(path));
+            this.Add(new DocumentXmlModel(path));
         }
     }
 }
