@@ -17,7 +17,9 @@
     </Window.DataContext>
     <Window.Resources>
         <conv:BoolToVisibilityConverter x:Key="BoolToVisible" />
-        <conv:DocumentStatusToString x:Key="DocumentStatusToString" />
+        <conv:DocumentStatusToStringConverter x:Key="DocumentStatusToString" />
+        <conv:DocumentStatusToImageConverter x:Key="DocumentStatusToImage" />
+        <conv:NullToBoolConverter x:Key="NullToBool" />
     </Window.Resources>
     <Window.InputBindings>
         <KeyBinding Modifiers="Ctrl" Key="O" Command="{Binding SchemaSelectCommand}" />
@@ -28,7 +30,7 @@
     <Grid act:FileDropBehavior.Command="{Binding FileDropCommand}">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
@@ -122,7 +124,12 @@
                 <ComboBox Grid.Row="3" Grid.Column="1"
                           ItemsSource="{Binding Schema.Phases}"
                           SelectedItem="{Binding Schema.SelectedPhase}" DisplayMemberPath="Id" />
-                <Label Grid.Row="4" Grid.Column="1" Content="{Binding Schema.Status, Mode=OneWay, Converter={StaticResource DocumentStatusToString}}" />
+                <ctrl:ToolItemButton Grid.Row="4" Grid.Column="1"
+                                     IsLinkEnabled="{Binding Schema.Message, Mode=OneWay, Converter={StaticResource NullToBool}}"
+                                     Style="{StaticResource DocumentStatusIconStyle}"
+                                     Command="{Binding SchemaMessageViewCommand}"
+                                     Content="{Binding Schema.Status, Mode=OneWay, Converter={StaticResource DocumentStatusToString}}"
+                                     ImageSource="{Binding Schema.Status, Mode=OneWay, Converter={StaticResource DocumentStatusToImage}}" />
             </Grid>
         </GroupBox>
         <GroupBox Grid.Row="2"
@@ -138,10 +145,9 @@
                                     <TextBlock Text="{Binding DisplaySize}" />
                                     <TextBlock Text="{Binding DisplayModifiedDate}" />
                                     <Image Source="{Binding Icon}" RenderOptions.BitmapScalingMode="HighQuality" Width="36" Height="36"  />
-                                    <Button 
-                                    Content="view" 
-                                    Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ReportViewCommand}"
-                                    CommandParameter="{Binding}"/>
+                                    <Button  Content="view"  
+                                             Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.ReportViewCommand}"
+                                             CommandParameter="{Binding}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>

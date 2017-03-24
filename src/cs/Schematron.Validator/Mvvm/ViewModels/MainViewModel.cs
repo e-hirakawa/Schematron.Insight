@@ -81,7 +81,9 @@ namespace Schematron.Validator.Mvvm.ViewModels
         {
             BindingOperations.EnableCollectionSynchronization(Xmls, new object());
             Progress = new ProgressModel();
-
+#if DEBUG
+            Schema = new DocumentSchemaModel(@"C:\Users\ehirakawa\Source\Workspaces\Schematron Learning\testdata\tournament.iso\tournament-schema.sch");
+#endif
         }
         public MainViewModel() : this(new string[] { }) { }
         #endregion
@@ -92,6 +94,7 @@ namespace Schematron.Validator.Mvvm.ViewModels
         public ICommand ValidationCommand => new RelayCommand(ValidationCommandExecute, ValidationCommandCanExecute);
         public ICommand SettingsCommand => new RelayCommand(SettingsCommandExecute, SettingsCommandCanExecute);
         public ICommand HelpCommand => new RelayCommand(HelpCommandExecute, HelpCommandCanExecute);
+        public ICommand SchemaMessageViewCommand => new RelayCommand(SchemaMessageViewCommandExecute, SchemaMessageViewCommandCanExecute);
         public ICommand ReportViewCommand => new RelayCommand<object>(ReportViewCommandExecute, ReportViewCommandCanExecute);
 
         #region Command Executions
@@ -162,6 +165,11 @@ namespace Schematron.Validator.Mvvm.ViewModels
         void HelpCommandExecute()
         {
 
+        }
+        bool SchemaMessageViewCommandCanExecute() => Schema != null && !String.IsNullOrWhiteSpace(Schema.Message);
+        void SchemaMessageViewCommandExecute()
+        {
+            ExDialogs.Warning(Schema.Message);
         }
         bool ReportViewCommandCanExecute(object param) => true;
         void ReportViewCommandExecute(object param)

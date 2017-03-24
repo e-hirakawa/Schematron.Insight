@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 
 namespace Schematron.Validator.Mvvm.Models
 {
@@ -14,8 +15,7 @@ namespace Schematron.Validator.Mvvm.Models
         #region Private Properties
         private SchemaDocument _doc = null;
         private Phase _selectedPhase;
-        private ObservableCollection<Phase> _phases;
-
+        private ObservableCollection<Phase> _phases = new ObservableCollection<Phase>();
         #endregion
         #region Public Properties
 
@@ -42,6 +42,7 @@ namespace Schematron.Validator.Mvvm.Models
 
         public DocumentSchemaModel(string filepath) : base(filepath)
         {
+            BindingOperations.EnableCollectionSynchronization(Phases, new object());
         }
         #endregion
         #region Override Method
@@ -64,13 +65,15 @@ namespace Schematron.Validator.Mvvm.Models
                 await Task.Run(() =>
                 {
                     Status = DocumentStatus.Loading;
-                    System.Threading.Thread.Sleep(5 * 1000);
                     try
                     {
                         _doc = new SchemaDocument();
                         _doc.Open(FullPath);
-                        Phases = new ObservableCollection<Phase>(_doc.Phases);
-                        Phases.Insert(0, new Phase() { Id = "ALL" });
+                        Phases.Add(new Phase() { Id = "ALL" });
+                        foreach (Phase phase in _doc.Phases)
+                            Phases.Add(phase);
+                        //Phases = new ObservableCollection<Phase>(_doc.Phases);
+                        //Phases.Insert(0, new Phase() { Id = "ALL" });
 
                         Status = DocumentStatus.LoadedCorrectly;
                     }

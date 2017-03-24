@@ -12,7 +12,7 @@ namespace Schematron.Validator.Utilities.Converter
     /// <summary>
     /// 列挙体と真偽値の変換クラス
     /// </summary>
-    public class EnumBooleanConverter : IValueConverter
+    public class EnumToBoolConverter : IValueConverter
     {
         #region IValueConverter Members
         /// <summary>

@@ -5,44 +5,42 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Data;
-using static Schematron.Validator.Properties.Resources;
 
 namespace Schematron.Validator.Utilities.Converter
 {
-    public class DocumentStatusToString : IValueConverter
+    public class DocumentStatusToImageConverter:IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             Type t = typeof(DocumentStatus);
             if (!Enum.IsDefined(t, value))
-                return DependencyProperty.UnsetValue;
+                return null;
 
             DocumentStatus val = (DocumentStatus)Enum.Parse(t, value.ToString());
-            string str = DocumentStatusNone;
+            string name = null;
             switch (val)
             {
                 case DocumentStatus.Loading:
-                    str = DocumentStatusLoading;
+                    name = "StatusAnnotations_Play_16xLG_color";
                     break;
                 case DocumentStatus.LoadedCorrectly:
-                    str = DocumentStatusLoadedCorrectly;
+                    name = "StatusAnnotations_Complete_and_ok_16xLG_color";
                     break;
                 case DocumentStatus.LoadedFailure:
-                    str = DocumentStatusLoadedFailure;
+                    name = "StatusAnnotations_Warning_16xLG_color";
                     break;
                 case DocumentStatus.Validating:
-                    str = DocumentStatusValidating;
+                    name = "StatusAnnotations_Play_16xLG_color";
                     break;
                 case DocumentStatus.ValidatedNoInfo:
-                    str = DocumentStatusValidatedNoInfo;
+                    name = "StatusAnnotations_Complete_and_ok_16xLG_color";
                     break;
                 case DocumentStatus.ValidatedHasInfo:
-                    str = DocumentStatusValidatedHasInfo;
+                    name = "StatusAnnotations_Warning_16xLG_color";
                     break;
             }
-            return str;
+            return name != null ? $"/Schematron.Validator;component/Resources/{name}.png" : null;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

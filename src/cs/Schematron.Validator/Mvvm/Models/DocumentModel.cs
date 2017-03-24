@@ -27,10 +27,7 @@ namespace Schematron.Validator.Mvvm.Models
         private string _dispdate;
         private ImageSource _icon;
         private DocumentStatus _status = DocumentStatus.None;
-        private string _message;
-
-
-
+        private string _message = null;
         #endregion
         #region Public Properties
         /// <summary>
@@ -204,7 +201,7 @@ namespace Schematron.Validator.Mvvm.Models
             DisplayModifiedDate = ToDisplayDate(ModifiedDate);
             Icon = CreateBitmapIcon(fi.FullName);
             Status = DocumentStatus.None;
-            Message = "";
+            Message = null;
         }
         private static string ToDisplaySize(double size)
         {

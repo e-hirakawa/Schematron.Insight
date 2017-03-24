@@ -43,4 +43,31 @@
         <Setter Property="Margin" Value="4" />
         <Setter Property="Padding" Value="2,4" />
     </Style>
+    <Style x:Key="DocumentStatusIconStyle" TargetType="ctrl:ToolItemButton">
+        <Setter Property="Cursor" Value="Arrow" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Cursor" Value="Arrow" />
+        <Setter Property="TextBlock.TextDecorations" Value="None" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ctrl:ToolItemButton">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{TemplateBinding ImageSource}" Width="16" Height="16" />
+                        <TextBlock Text="{TemplateBinding Content}"
+                                   VerticalAlignment="Center"
+                                   TextDecorations="{TemplateBinding TextBlock.TextDecorations}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   />
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsLinkEnabled" Value="True">
+                <Setter Property="Foreground" Value="Blue" />
+                <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>
